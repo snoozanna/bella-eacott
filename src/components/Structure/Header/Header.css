@@ -1,0 +1,31 @@
+header {
+  padding: 2rem;
+}
+
+img.logo {
+  max-width: 400px;
+  flex-grow: 1;
+  margin: auto;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-item.left,
+.nav-item.right {
+  display: flex;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item > li {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

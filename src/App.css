@@ -1,5 +1,32 @@
+@font-face {
+  font-family: "SouvenirMed";
+  src: url("/src/assets/fonts/Souvenir-Medium.otf") format("woff2");
+}
+@font-face {
+  font-family: "SouvenirBold";
+  src: url("/src/assets/fonts/Souvenir-Bold.otf") format("woff2");
+}
+
+:root {
+  --pink: #f49ac2;
+  --blue: #002bab;
+  --yellow: #fff200;
+  --font-reg: "SouvenirMed";
+  --font-bold: "SouvenirBold";
+}
+
+body {
+  background-color: var(--pink);
+  font-family: var(--font-reg);
+}
+
 .App {
   text-align: center;
+  background-color: var(--pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .App-logo {
@@ -14,7 +41,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--pink);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
