@@ -45,7 +45,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes> */}
 
-          <ParallaxLayer offset={0.5} speed={0.5}>
+          <ParallaxLayer offset={0.1} speed={0.5}>
             <Home />
           </ParallaxLayer>
 
@@ -53,11 +53,15 @@ function App() {
             <Book paraRef={paraRef} />
           </ParallaxLayer>
           <ParallaxLayer
-            offset={1.7}
+            offset={1.1}
             speed={2}
             style={{ backgroundColor: "#ff6d6d" }}
           />
-          <ParallaxLayer offset={2} speed={0.5}>
+          <ParallaxLayer
+            offset={2}
+            speed={0.5}
+            style={{ backgroundColor: "#ff6d6d" }}
+          >
             <Contact />
           </ParallaxLayer>
           <ParallaxLayer
