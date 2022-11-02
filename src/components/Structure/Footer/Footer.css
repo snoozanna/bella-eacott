@@ -3,8 +3,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
+.footer-item {
+  align-self: flex-end;
+}
 .footer-item > img.logo {
   max-width: 100px;
   flex-grow: 1;

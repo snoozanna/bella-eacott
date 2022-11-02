@@ -1,4 +1,10 @@
 .description {
   font-size: 3rem;
   margin-block-end: 3rem;
+  padding: 2rem;
+  width: 40%;
+}
+
+img {
+  width: 60%;
 }

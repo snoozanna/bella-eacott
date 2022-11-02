@@ -2,4 +2,49 @@ main {
   padding: 2rem;
   max-width: 1080px;
   margin: auto;
+  font-size: 1.8rem;
+}
+
+section {
+  padding: 2rem;
+}
+
+p,
+ul > li {
+  line-height: 2.5rem;
+}
+
+ul > li {
+  margin-bottom: 1rem;
+}
+
+section.home-content,
+section.book-content,
+section.contact-content,
+section.pricing-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+section.expect-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+section.skinny {
+  max-width: 1080px;
+  margin: auto;
+}
+
+.content-item {
+  margin-inline-end: 1rem;
+}
+
+.content-item:last-child {
+  margin-inline-end: 0;
 }

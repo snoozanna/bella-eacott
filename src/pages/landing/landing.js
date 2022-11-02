@@ -31,7 +31,7 @@ const Landing = () => {
     loop: true,
     from: { rotateZ: 0 },
     to: { rotateZ: 360 },
-    config: { duration: 5000 },
+    config: { duration: 8000 },
   });
 
   return (

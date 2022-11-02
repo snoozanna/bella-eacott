@@ -1,15 +1,34 @@
-import Main from "../../components/Structure/Main/Main";
-
-export const About = () => {
+export const About = (props) => {
   return (
     <>
-      <Main>
+      <section className="about-content skinny">
         <p>
           I qualified as a massage therapist in 2018, beginning my studies in
           osteopathy the same year. I am trained to provide sports and remedial
           massage, deep tissue as well as relaxing and holistic styles of
-          treatment, and you can read more about how I work, what to expect,
-          treatments and prices below. [link to these bits].
+          treatment, and you can read more about how I work,{" "}
+          <button
+            className="withinText"
+            onClick={() => props.paraRef.current.scrollTo(3)}
+          >
+            {" "}
+            what to expect
+          </button>
+          ,{" "}
+          <button
+            className="withinText"
+            onClick={() => props.paraRef.current.scrollTo(3)}
+          >
+            treatments
+          </button>{" "}
+          and{" "}
+          <button
+            className="withinText"
+            onClick={() => props.paraRef.current.scrollTo(5)}
+          >
+            costs
+          </button>{" "}
+          below.
         </p>
 
         <p>
@@ -24,7 +43,7 @@ export const About = () => {
           that I approach my practice. I am a member of the Federation of
           Holistic Therapists, and the XXX, and fully insured by XXX.
         </p>
-      </Main>
+      </section>
     </>
   );
 };

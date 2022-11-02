@@ -11,6 +11,7 @@
   --pink: #f49ac2;
   --blue: #002bab;
   --yellow: #fff200;
+  --orange: #ff6d6d;
   --font-reg: "SouvenirMed";
   --font-bold: "SouvenirBold";
 }
@@ -21,7 +22,7 @@ body {
 }
 
 .App {
-  text-align: center;
+  text-align: left;
   background-color: var(--pink);
   display: flex;
   flex-direction: column;
@@ -61,5 +62,23 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.highlighted {
+  text-decoration: underline;
+}
+
+button.withinText {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  .App {
+    display: none;
   }
 }

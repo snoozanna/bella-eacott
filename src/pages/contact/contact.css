@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  padding: 1rem;
+}
+
+form > input {
+  margin-block-end: 1rem;
+}

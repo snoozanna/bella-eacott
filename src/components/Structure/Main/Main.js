@@ -1,8 +1,8 @@
 import "./Main.css";
-export default function Main(props) {
+export default function Main(page) {
   return (
     <>
-      <main>{props.children}</main>
+      <main className={page.page}>{page.children}</main>
     </>
   );
 }

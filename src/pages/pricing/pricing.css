@@ -1,0 +1,26 @@
+.greenBottleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* width: 50%; */
+}
+
+.greenBottleWrapper > .bottle {
+  max-width: 150px;
+}
+
+.content-item.bottle > span {
+  margin-block-end: 1rem;
+}
+
+.content-item {
+  width: 49%;
+}
+
+.content-item.bottle {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}

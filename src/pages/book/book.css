@@ -1,0 +1,9 @@
+.bookingWidget {
+  border: solid 1px black;
+  width: 40vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--orange);
+}
