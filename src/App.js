@@ -21,6 +21,7 @@ function App() {
   // console.log("paraRef in app", paraRef);
   return (
     <Router>
+      {/* <Route index> */}
       {window.location.pathname !== "/landing" ? (
         <Header paraRef={paraRef} />
       ) : null}
@@ -74,6 +75,7 @@ function App() {
         </Parallax>
       </Main>
       {window.location.pathname !== "/landing" ? <Footer /> : null}
+      {/* </Route> */}
       {/* <Route path="*" element={<NotFound />} /> */}
     </Router>
   );
