@@ -4,6 +4,9 @@
   align-items: center;
   color: var(--pink);
 }
+body {
+  background-color: var(--blue);
+}
 
 header {
   padding: 2rem;
