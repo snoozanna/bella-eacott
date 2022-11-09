@@ -38,7 +38,7 @@ const Main = forwardRef((props, ref) => {
           </ParallaxLayer>
 
           <ParallaxLayer offset={1} speed={0.5}>
-            <Book paraRef={props.paraRef} />
+            <Book ref={ref} />
           </ParallaxLayer>
           <ParallaxLayer
             offset={1.1}
@@ -60,7 +60,7 @@ const Main = forwardRef((props, ref) => {
             <Expect />
           </ParallaxLayer>
           <ParallaxLayer offset={4} speed={0.5}>
-            <About paraRef={props.paraRef} />
+            <About ref={ref} />
           </ParallaxLayer>
           <ParallaxLayer offset={5} speed={0.5}>
             <Pricing />

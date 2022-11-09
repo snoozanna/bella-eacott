@@ -1,4 +1,6 @@
-export const About = (props) => {
+import { forwardRef } from "react";
+
+const About = forwardRef((props, ref) => {
   return (
     <>
       <section className="about-content skinny">
@@ -9,7 +11,7 @@ export const About = (props) => {
           treatment, and you can read more about how I work,{" "}
           <button
             className="withinText"
-            onClick={() => props.paraRef.current.scrollTo(3)}
+            onClick={() => ref.current.scrollTo(3)}
           >
             {" "}
             what to expect
@@ -17,14 +19,14 @@ export const About = (props) => {
           ,{" "}
           <button
             className="withinText"
-            onClick={() => props.paraRef.current.scrollTo(3)}
+            onClick={() => ref.current.scrollTo(3)}
           >
             treatments
           </button>{" "}
           and{" "}
           <button
             className="withinText"
-            onClick={() => props.paraRef.current.scrollTo(5)}
+            onClick={() => ref.current.scrollTo(5)}
           >
             costs
           </button>{" "}
@@ -46,6 +48,6 @@ export const About = (props) => {
       </section>
     </>
   );
-};
+});
 
 export default About;

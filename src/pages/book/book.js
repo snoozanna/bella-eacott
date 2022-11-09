@@ -1,7 +1,8 @@
-import Main from "../../components/Structure/Main/Main";
+import { forwardRef } from "react";
 import "./book.css";
 
-export const Book = (props) => {
+const Book = forwardRef((props, ref) => {
+  // console.log("ref in book", ref);
   return (
     <>
       <section className="book-content">
@@ -14,7 +15,7 @@ export const Book = (props) => {
             Find out more about how I work and{" "}
             <button
               className="withinText"
-              onClick={() => props.paraRef.current.scrollTo(3)}
+              onClick={() => ref.current.scrollTo(3)}
             >
               {" "}
               what to expect
@@ -22,14 +23,14 @@ export const Book = (props) => {
             , the type of{" "}
             <button
               className="withinText"
-              onClick={() => props.paraRef.current.scrollTo(3)}
+              onClick={() => ref.current.scrollTo(3)}
             >
               treatments
             </button>{" "}
             and{" "}
             <button
               className="withinText"
-              onClick={() => props.paraRef.current.scrollTo(5)}
+              onClick={() => ref.current.scrollTo(5)}
             >
               prices
             </button>
@@ -40,6 +41,6 @@ export const Book = (props) => {
       </section>
     </>
   );
-};
+});
 
 export default Book;
