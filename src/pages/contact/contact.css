@@ -3,10 +3,22 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 1px black;
+  border: solid 1px var(--blue);
+  border-radius: 5px;
   padding: 1rem;
 }
 
 form > input {
   margin-block-end: 1rem;
+  font-family: var(--font-reg);
+}
+
+form > button {
+  font-family: var(--font-bold);
+  font-variant: small-caps;
+  font-size: 1.3rem;
+  background-color: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 5px;
 }
