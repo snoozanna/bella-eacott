@@ -1,9 +1,10 @@
+import { useSpring, animated } from "react-spring";
+import SEO from "./../../components/Structure/SEO/SEO";
 import "./holding.css";
 import face from "./../../assets/img/face.png";
 import insta from "./../../assets/img/insta.png";
 
-import { Link } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
+// import { Link } from "react-router-dom";
 
 const Landing = () => {
   const anim1 = useSpring({
@@ -38,6 +39,13 @@ const Landing = () => {
 
   return (
     <>
+      <SEO
+        title="Bella Eacott Massage"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="Bella Eacott Massage"
+        type="article"
+      />
       <header>
         <h1>
           Bella Eacott <span class="massage">Massage</span>{" "}

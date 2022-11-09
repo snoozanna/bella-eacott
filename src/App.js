@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 // import { BrowserRouter as Router } from "react-router-dom";
 // import Landing from "./pages/landing/landing";
 import Holding from "./pages/holding/holding";
@@ -10,14 +11,16 @@ import "./styles/generics.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* <Route path="/landing" element={<Landing />} /> */}
-        <Route index element={<Holding />} />
-        {/* <Route index element={<Wrapper />} /> */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Routes>
+          {/* <Route path="/landing" element={<Landing />} /> */}
+          <Route index element={<Holding />} />
+          {/* <Route index element={<Wrapper />} /> */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 
