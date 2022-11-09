@@ -1,5 +1,6 @@
 import "./holding.css";
 import face from "./../../assets/img/face.png";
+import logo from "./../../assets/img/bella-logo-bg.png";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
@@ -36,9 +37,18 @@ const Landing = () => {
 
   return (
     <>
+      <header>
+        <h1>
+          Bella Eacott <span class="massage">Massage</span>{" "}
+        </h1>{" "}
+        <p class="description">
+          Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London.
+        </p>
+      </header>
       <div className="App holding">
-        <Link to="/">
-          <div className="hero">
+        <div className="hero">
+          <div className="taglineWrapper">
             <animated.span style={anim1} className="tagline">
               LET'S
             </animated.span>
@@ -48,15 +58,39 @@ const Landing = () => {
             <animated.span style={anim3} className="tagline">
               NICE
             </animated.span>
-            <animated.img
-              className="face"
-              src={face}
-              style={faceanim}
-              alt="a little yellow paint splodge with a face inside it"
-            />
           </div>
-        </Link>
+          <animated.img
+            className="face"
+            src={face}
+            style={faceanim}
+            alt="a little yellow paint splodge with a face inside it"
+          />
+        </div>
+
+        <div className="description"></div>
       </div>
+      <footer>
+        <div className="footerItem">
+          Insta{" "}
+          <a
+            href="https://www.instagram.com/bellaeacott/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @bellaeacott
+          </a>
+        </div>
+        <div className="footerItem">
+          Book via{" "}
+          <a
+            href="https://bellaeacottmassage.as.me/schedule.php"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Acuity
+          </a>
+        </div>
+      </footer>
     </>
   );
 };
