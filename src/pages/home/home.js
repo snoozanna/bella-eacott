@@ -1,8 +1,3 @@
-import Main from "../../components/Structure/Main/Main";
-// import Book from "./../book/book.js";
-// import Expect from "./../expect/expect";
-// import About from "./../about/about";
-// import Pricing from "./../pricing/pricing";
 import img from "./../../assets/img/Bella.JPG";
 import "./home.css";
 

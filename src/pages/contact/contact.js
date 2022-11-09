@@ -12,7 +12,7 @@ import "./contact.css";
 // });
 
 export const Contact = ({ initialValues }) => {
-  const [populated, setPopulated] = useState(false);
+  // const [populated, setPopulated] = useState(false);
   const defaultValues = {
     name: "",
     email: "",
