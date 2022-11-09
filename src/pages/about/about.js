@@ -7,30 +7,15 @@ const About = forwardRef((props, ref) => {
         <p>
           I qualified as a massage therapist in 2018, beginning my studies in
           osteopathy the same year. I am trained to provide sports and remedial
-          massage, deep tissue as well as relaxing and holistic styles of
-          treatment, and you can read more about how I work,{" "}
+          massage, deep tissue as well as relaxing and holistic styles of{" "}
           <button
-            className="withinText"
+            className="withinText highlighted"
             onClick={() => ref.current.scrollTo(3)}
           >
             {" "}
-            what to expect
+            treatment
           </button>
-          ,{" "}
-          <button
-            className="withinText"
-            onClick={() => ref.current.scrollTo(3)}
-          >
-            treatments
-          </button>{" "}
-          and{" "}
-          <button
-            className="withinText"
-            onClick={() => ref.current.scrollTo(5)}
-          >
-            costs
-          </button>{" "}
-          below.
+          .
         </p>
 
         <p>
@@ -42,8 +27,17 @@ const About = forwardRef((props, ref) => {
           importance of touch, communication and embodied experiences in how we
           understand our bodies, health and illness. I continue to be interested
           and involved in research around these topics, which influence the ways
-          that I approach my practice. I am a member of the Federation of
-          Holistic Therapists, and the XXX, and fully insured by XXX.
+          that I approach my practice. I am a member of the{" "}
+          <a
+            href="https://www.thesma.org/"
+            className="highlighted"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Association for Soft Tissue Therapists
+          </a>{" "}
+          , and fully insured by Protectivity Insurance.
         </p>
       </section>
     </>

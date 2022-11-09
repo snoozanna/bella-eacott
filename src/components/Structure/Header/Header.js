@@ -11,13 +11,14 @@ const Header = forwardRef((props, ref) => {
         <nav>
           <ul className="nav-item">
             <li onClick={() => ref.current.scrollTo(0)}>Home</li>
-            <li onClick={() => ref.current.scrollTo(1)}>Book me</li>
-            <li onClick={() => ref.current.scrollTo(2)}>Contact me</li>
-            <li onClick={() => ref.current.scrollTo(3)}>
+            <li onClick={() => ref.current.scrollTo(1)}>About me</li>
+            <li onClick={() => ref.current.scrollTo(2)}>
+              {" "}
               Treatments & What to Expect
             </li>
-            <li onClick={() => ref.current.scrollTo(4)}>About me</li>
-            <li onClick={() => ref.current.scrollTo(5)}>Pricing</li>
+            <li onClick={() => ref.current.scrollTo(3)}>Pricing</li>
+            <li onClick={() => ref.current.scrollTo(4)}>Book me</li>
+            <li onClick={() => ref.current.scrollTo(5)}>Contact me</li>
           </ul>
         </nav>
       </header>

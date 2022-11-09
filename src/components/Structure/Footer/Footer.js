@@ -19,7 +19,7 @@ export default function Footer() {
     <>
       <footer>
         <div className="footer-item">email@email.com</div>
-        <div className="footer-item">
+        <div className="footer-item logo">
           <animated.img style={wave} src={logo} alt="logo" className="logo" />
         </div>
       </footer>

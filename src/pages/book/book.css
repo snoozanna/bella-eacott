@@ -1,4 +1,4 @@
-.bookingWidget {
+/* .bookingWidget {
   border: solid 1px black;
   width: 40vw;
   height: 300px;
@@ -6,4 +6,8 @@
   justify-content: center;
   align-items: center;
   background-color: var(--orange);
+} */
+
+p {
+  text-align: center;
 }

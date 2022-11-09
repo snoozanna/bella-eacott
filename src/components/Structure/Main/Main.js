@@ -38,32 +38,33 @@ const Main = forwardRef((props, ref) => {
           </ParallaxLayer>
 
           <ParallaxLayer offset={1} speed={0.5}>
-            <Book ref={ref} />
+            <About ref={ref} />
           </ParallaxLayer>
-          <ParallaxLayer
+          {/* <ParallaxLayer
             offset={1.1}
             speed={2}
             style={{ backgroundColor: "#ff6d6d" }}
-          />
+          /> */}
           <ParallaxLayer
             offset={2}
             speed={0.5}
             style={{ backgroundColor: "#ff6d6d" }}
           >
-            <Contact />
+            <Expect />
           </ParallaxLayer>
           <ParallaxLayer
             offset={3}
             speed={0.5}
             style={{ backgroundColor: "#ff6d6d" }}
           >
-            <Expect />
+            <Pricing />
           </ParallaxLayer>
           <ParallaxLayer offset={4} speed={0.5}>
-            <About ref={ref} />
+            <Book ref={ref} />
           </ParallaxLayer>
           <ParallaxLayer offset={5} speed={0.5}>
-            <Pricing />
+            {" "}
+            <Contact />
           </ParallaxLayer>
         </Parallax>
       </main>

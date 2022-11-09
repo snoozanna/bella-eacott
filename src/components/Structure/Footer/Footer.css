@@ -11,6 +11,10 @@ footer {
 .footer-item {
   align-self: flex-end;
 }
+
+.footer-item.logo {
+  display: flex;
+}
 .footer-item > img.logo {
   max-width: 100px;
   flex-grow: 1;

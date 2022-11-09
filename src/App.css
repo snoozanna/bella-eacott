@@ -69,6 +69,11 @@ body {
   text-decoration: underline;
 }
 
+.highlighted:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 button.withinText {
   border: none;
   background: none;
