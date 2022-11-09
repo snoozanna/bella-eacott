@@ -46,6 +46,16 @@ footer {
   color: var(--pink);
 }
 
+.footerItem {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footerItem > img {
+  max-width: 2.5rem;
+  margin-inline-end: 1rem;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -81,5 +91,11 @@ a:hover {
 
   header > .description {
     display: none;
+  }
+
+  .tagline {
+    font-family: "SouvenirBold";
+    color: var(--pink);
+    font-size: 7rem;
   }
 }

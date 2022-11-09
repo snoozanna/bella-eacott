@@ -1,6 +1,7 @@
 import "./holding.css";
 import face from "./../../assets/img/face.png";
-import logo from "./../../assets/img/bella-logo-bg.png";
+import insta from "./../../assets/img/insta.png";
+
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
@@ -71,7 +72,7 @@ const Landing = () => {
       </div>
       <footer>
         <div className="footerItem">
-          Insta{" "}
+          <img src={insta} alt="instagram logo " />
           <a
             href="https://www.instagram.com/bellaeacott/"
             target="_blank"
@@ -81,14 +82,17 @@ const Landing = () => {
           </a>
         </div>
         <div className="footerItem">
-          Book via{" "}
-          <a
-            href="https://bellaeacottmassage.as.me/schedule.php"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Acuity
-          </a>
+          <span>
+            Book via{" "}
+            <a
+              href="https://bellaeacottmassage.as.me/schedule.php"
+              target="_blank"
+              rel="noreferrer"
+              class="highlighted"
+            >
+              Acuity
+            </a>
+          </span>
         </div>
       </footer>
     </>
