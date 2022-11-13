@@ -2,7 +2,7 @@ import "./expect.css";
 export const Expect = () => {
   return (
     <>
-      <section className="expect-content skinny">
+      <section className="expect content skinny">
         <div className="expect-item">
           <p>
             Massages will always be tailored to you and what you need, and every

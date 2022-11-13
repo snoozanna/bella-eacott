@@ -6,7 +6,7 @@ import "./pricing.css";
 const Pricing = () => {
   return (
     <>
-      <section className="pricing-content skinny">
+      <section className="pricing content skinny">
         <div className="content-item">
           <p>
             Whatever kind of massage you would like, treatments are priced by
@@ -36,17 +36,17 @@ const Pricing = () => {
           <div className="greenBottleWrapper">
             <img
               src={green1}
-              alt="The Green Bottle Diagram 1"
+              alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
               className="bottle"
             />
             <img
               src={green2}
-              alt="The Green Bottle Diagram 2"
+              alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
               className="bottle"
             />
             <img
               src={green3}
-              alt="The Green Bottle Diagram 3"
+              alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
               className="bottle"
             />
           </div>

@@ -1,7 +1,7 @@
 header {
   padding: 2rem;
   max-width: 100%;
-  /* height: 20vh; */
+  min-height: 20vh;
   background-color: var(--pink);
   font-size: 2rem;
   z-index: 9999;
@@ -55,4 +55,9 @@ nav > ul {
 
 .nav-item > li:hover {
   color: var(--yellow);
+}
+
+.current {
+  color: var(--yellow);
+  font-size: 3rem;
 }

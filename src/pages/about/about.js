@@ -1,16 +1,18 @@
-import { forwardRef } from "react";
+import { forwardRef, useContext } from "react";
+import { MenuContext } from "./../../contexts/menu.context";
 
 const About = forwardRef((props, ref) => {
+  const { changePage } = useContext(MenuContext);
   return (
     <>
-      <section className="about-content skinny">
+      <section className="about content skinny">
         <p>
           I qualified as a massage therapist in 2018, beginning my studies in
           osteopathy the same year. I am trained to provide sports and remedial
           massage, deep tissue as well as relaxing and holistic styles of{" "}
           <button
             className="withinText highlighted"
-            onClick={() => ref.current.scrollTo(3)}
+            onClick={() => ref.current.scrollTo(changePage(2))}
           >
             {" "}
             treatment

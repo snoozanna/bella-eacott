@@ -46,7 +46,7 @@ export const Contact = ({ initialValues }) => {
   // console.log(errors);
   return (
     <>
-      <section className="contact-content skinny">
+      <section className="contact content skinny">
         <p>
           If you’d like to discuss your appointment or have any questions
           regarding massage or your treatment with me, please fill in the form

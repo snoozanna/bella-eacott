@@ -1,11 +1,10 @@
-import { forwardRef } from "react";
 import "./book.css";
 
-const Book = forwardRef((props, ref) => {
+const Book = () => {
   // console.log("ref in book", ref);
   return (
     <>
-      <section className="book-content skinny">
+      <section className="book content skinny">
         <p className="content-item">
           I see clients at the beautiful{" "}
           <a
@@ -18,7 +17,7 @@ const Book = forwardRef((props, ref) => {
           </a>{" "}
           in Peckham, and also do home visits across most parts of London.
         </p>
-        <div className="bookingWidget content-item">
+        {/* <div className="bookingWidget content-item">
           <iframe
             src="https://app.squarespacescheduling.com/schedule.php?owner=27159191"
             title="Schedule Appointment"
@@ -30,10 +29,10 @@ const Book = forwardRef((props, ref) => {
             src="https://embed.acuityscheduling.com/js/embed.js"
             type="text/javascript"
           ></script>
-        </div>
+        </div> */}
       </section>
     </>
   );
-});
+};
 
 export default Book;
