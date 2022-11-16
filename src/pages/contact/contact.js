@@ -41,7 +41,8 @@ const onSubmit = async (event, setSubmitText) => {
       .then(() => {
         setSubmitText("Successfully submitted!");
       })
-      .catch((_) => {
+      .catch((error) => {
+        console.log(error);
         setSubmitText(
           "There was an error with your submission, please email me using the address above.",
         );
