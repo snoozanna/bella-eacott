@@ -62,7 +62,7 @@ export const Contact = ({ initialValues }) => {
     <>
       <form
         id="contact"
-        name="contact"
+        name="contact-form"
         method="POST"
         data-netlify="true"
         onSubmit={(e) => onSubmit(e, setSubmitText)}
