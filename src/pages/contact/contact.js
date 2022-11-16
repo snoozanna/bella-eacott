@@ -13,7 +13,40 @@ import "./contact.css";
 const onSubmit = async (event, setSubmitText) => {
   event.preventDefault();
   setSubmitText("Submitting ...");
-  debugger;
+  const formElements = [...event.currentTarget.elements];
+  const isValid =
+    formElements.filter((elem) => elem.name === "bot-field")[0].value === "";
+
+  const validFormElements = isValid ? formElements : [];
+
+  if (validFormElements.length < 1) {
+    // or some other cheeky error message
+    setSubmitText("It looks like you filled out too many fields!");
+  } else {
+    const filledOutElements = validFormElements
+      .filter((elem) => !!elem.value)
+      .map(
+        (element) =>
+          encodeURIComponent(element.name) +
+          "=" +
+          encodeURIComponent(element.value),
+      )
+      .join("&");
+
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: filledOutElements,
+    })
+      .then(() => {
+        setSubmitText("Successfully submitted!");
+      })
+      .catch((_) => {
+        setSubmitText(
+          "There was an error with your submission, please email me using the address above.",
+        );
+      });
+  }
 };
 
 export const Contact = ({ initialValues }) => {
@@ -28,7 +61,7 @@ export const Contact = ({ initialValues }) => {
   return (
     <>
       <form
-        id="#contact"
+        id="contact"
         name="contact"
         method="POST"
         data-netlify="true"
@@ -64,9 +97,9 @@ export const Contact = ({ initialValues }) => {
             <textarea required={true} id="message" name="message"></textarea>
           </label>
         </p>
-        <submit type="submit" name="SendMessage">
+        <button type="submit" name="SendMessage">
           Send
-        </submit>
+        </button>
       </form>
       {submitText}
     </>
