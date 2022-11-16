@@ -7,11 +7,15 @@ const Pricing = () => {
   return (
     <>
       <section className="pricing content skinny">
-        <div className="content-item">
+        {/* <div className="content-item">
           <p>
             Whatever kind of massage you would like, treatments are priced by
-            length: - 60 minutes: £75) - 90 minutes: £90)
+            length:
           </p>
+          <ul>
+            <li>60 minutes: £75</li>
+            <li>90 minutes: £90</li>
+          </ul>
 
           <p>
             When you book, you will have the option to write a note if you’d
@@ -27,13 +31,14 @@ const Pricing = () => {
             £40, to make it as accessible as possible, which can be booked using
             the same link as above. For guidance on deciding where you fall on
             the sliding scale, and how much to pay, please refer to the “Green
-            Bottle Sliding Scale” model below:
+            Bottle Sliding Scale” model:
           </p>
-        </div>
+        </div> */}
         <div className="content-item bottle">
           <h3>THE GREEN BOTTLE</h3>
           <span>Where you fall on the sliding scale</span>
           <div className="greenBottleWrapper">
+            <div class="priviledge scale">Financial priviledge</div>
             <img
               src={green1}
               alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
@@ -50,7 +55,15 @@ const Pricing = () => {
               className="bottle"
             />
           </div>
-          <p>NEED TO ADD THE OTHER INFO FROM DIAGRAM</p>
+          <div>
+            <div class="scale"> Personal Financial Experience</div>
+          </div>
+          <p class="explanation">
+            Basic needs include food, housing and transportation. Expendable
+            income might mean that you are able to buy a coffee or tea at a
+            shop, go to movies or a concert, or buy new clothes, books, and
+            similar items each month, etc.
+          </p>
         </div>
       </section>
     </>

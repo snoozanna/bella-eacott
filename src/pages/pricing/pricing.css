@@ -10,6 +10,15 @@
   max-width: 150px;
 }
 
+.priviledge {
+  writing-mode: vertical-rl;
+}
+
+.explanation {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
 .content-item.bottle > span {
   margin-block-end: 1rem;
 }

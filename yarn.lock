@@ -7939,6 +7939,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-scroll-rotate@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-scroll-rotate/-/react-scroll-rotate-0.0.7.tgz#54b8ab7b8d0ea8f8f4e64ed0c672170f11b05a36"
+  integrity sha512-Sfjlo5CnzRjQ/Dl5jticKqs/sNUjNsTwNQTmh8DFb6x+sh3xNT8cdIBzyT93hryJ08gpdaEqFsCyxD3Z+9E2VA==
+
 react-spring@^9.5.5:
   version "9.5.5"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-9.5.5.tgz#314009a65efc04d0ef157d3d60590dbb9de65f3c"

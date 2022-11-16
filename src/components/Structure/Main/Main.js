@@ -17,25 +17,24 @@ const Main = forwardRef((props, ref) => {
     <>
       <main className={"test"}>
         {props.children}
-        <Parallax pages={7} style={{ top: "0", left: "0" }} ref={ref}>
+        <Parallax
+          pages={7}
+          style={{ top: "0", left: "0" }}
+          ref={ref}
+          factor={0.8}
+        >
           <ParallaxLayer
             offset={0.7}
-            speed={2}
+            speed={3}
             style={{ backgroundColor: "#ff6d6d" }}
           />
-
           <ParallaxLayer offset={0.1} speed={0.5}>
             <Home />
           </ParallaxLayer>
-
           <ParallaxLayer offset={1} speed={0.5}>
             <About ref={ref} />
           </ParallaxLayer>
-          {/* <ParallaxLayer
-            offset={1.1}
-            speed={2}
-            style={{ backgroundColor: "#ff6d6d" }}
-          /> */}
+
           <ParallaxLayer
             offset={2}
             speed={0.5}
@@ -54,7 +53,6 @@ const Main = forwardRef((props, ref) => {
             <Book />
           </ParallaxLayer>
           <ParallaxLayer offset={5} speed={0.5}>
-            {" "}
             <Contact />
           </ParallaxLayer>
         </Parallax>

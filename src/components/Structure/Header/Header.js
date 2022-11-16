@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom";
 import { forwardRef, useContext, useEffect } from "react";
+
 import { MenuContext } from "../../../contexts/menu.context";
 import logo from "./../../../assets/img/bella-logo-bg.png";
 import "./Header.css";
@@ -66,7 +67,7 @@ const Header = forwardRef((props, ref) => {
         <img
           src={logo}
           alt="logo"
-          className="logo"
+          className="logo circle"
           onClick={() => ref.current.scrollTo(0)}
         />
       </div>
