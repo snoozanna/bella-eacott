@@ -18,7 +18,7 @@ const Main = forwardRef((props, ref) => {
       <main className={"test"}>
         {props.children}
         <Parallax
-          pages={7}
+          pages={6}
           style={{ top: "0", left: "0" }}
           ref={ref}
           factor={0.8}

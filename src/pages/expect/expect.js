@@ -3,7 +3,7 @@ export const Expect = () => {
   return (
     <>
       <section className="expect content skinny">
-        <div className="expect-item">
+        <div className="content-item">
           <p>
             Massages will always be tailored to you and what you need, and every
             appointment starts with a conversation to find out about your needs,
@@ -33,7 +33,7 @@ export const Expect = () => {
           </ul>
         </div>
 
-        <div className="expect-item">
+        <div className="content-item">
           <p>
             During treatments I draw on a range of techniques and approaches
             which may include combining relaxing and holistic massage strokes,

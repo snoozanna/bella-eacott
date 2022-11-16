@@ -53,6 +53,7 @@ export const Contact = ({ initialValues }) => {
           setSubmitText("Successfully submitted");
           setButtonTxt("Sent!");
           setButtonDisabled(!buttonDisabled);
+          //TODO form reset
         })
         .catch((error) => {
           console.log(error);
@@ -93,6 +94,9 @@ export const Contact = ({ initialValues }) => {
               value="contact-form"
               readOnly={true}
             />
+            <button type="submit" name="SendMessage" disabled={buttonDisabled}>
+              {buttonTxt}
+            </button>
             <div>
               <label htmlFor="name">
                 <p>Name: </p>
@@ -128,9 +132,7 @@ export const Contact = ({ initialValues }) => {
                 className="form-control"
               ></textarea>
             </div>
-            <button type="submit" name="SendMessage" disabled={buttonDisabled}>
-              {buttonTxt}
-            </button>
+
             {submitText}
           </form>
         </div>

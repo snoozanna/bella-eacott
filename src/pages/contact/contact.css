@@ -37,6 +37,7 @@ form > button {
   padding: 8px;
   margin-block-end: 1rem;
   border-radius: 5px;
+  align-self: flex-end;
 }
 
 form > button:hover {
@@ -46,6 +47,7 @@ form > button:hover {
 form > button:disabled {
   background-color: var(--yellow);
   color: black;
+  cursor: initial;
 }
 
 .form-control {

@@ -10,7 +10,6 @@ const Header = forwardRef((props, ref) => {
 
   useEffect(() => {
     ref.current.scrollTo(currentPage);
-    console.log("useEffect has triggered because current page has changed");
   }, [currentPage, ref]);
 
   const handleToggle = (newPage) => {
@@ -61,7 +60,6 @@ const Header = forwardRef((props, ref) => {
             </li>
           </ul>
         </nav>
-        <p>{currentPage}</p>
       </header>
       <div className="logoWrapper">
         <img
