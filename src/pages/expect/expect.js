@@ -22,7 +22,7 @@ export const Expect = () => {
             </li>
             <li>
               • Pregnancy and post natal massage, tailored towards the needs of
-              pregnant people and new parents{" "}
+              pregnant people and new parents
             </li>
             <li>
               • Sports and remedial massage which focuses on particular areas of

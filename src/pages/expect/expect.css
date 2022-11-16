@@ -1,3 +1,7 @@
 .expect-item {
   width: 50%;
 }
+
+.expect-item:first-child {
+  margin-inline-end: 1rem;
+}

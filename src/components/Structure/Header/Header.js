@@ -1,51 +1,19 @@
 // import { Link } from "react-router-dom";
-import { forwardRef, useContext, useState } from "react";
+import { forwardRef, useContext, useEffect } from "react";
 import { MenuContext } from "../../../contexts/menu.context";
 import logo from "./../../../assets/img/bella-logo-bg.png";
 import "./Header.css";
 
-// with forwardRef
-// const Header = forwardRef(({ pageName }, ref) => {
-//   console.log("pageName", pageName);
-//   return (
-//     <>
-//       <header>
-//         <nav>
-//           <ul className="nav-item">
-//             <li onClick={() => ref.current.scrollTo(0)}>Home</li>
-//             <li onClick={() => ref.current.scrollTo(1)}>About me</li>
-//             <li onClick={() => ref.current.scrollTo(2)}>
-//               {" "}
-//               Treatments & What to Expect
-//             </li>
-//             <li onClick={() => ref.current.scrollTo(3)}>Pricing</li>
-//             <li onClick={() => ref.current.scrollTo(4)}>Book me</li>
-//             <li onClick={() => ref.current.scrollTo(5)}>Contact me</li>
-//           </ul>
-//         </nav>
-//         {pageName}
-//       </header>
-//       <div className="logoWrapper">
-//         <img
-//           src={logo}
-//           alt="logo"
-//           className="logo"
-//           onClick={() => ref.current.scrollTo(0)}
-//         />
-//       </div>
-//     </>
-//   );
-// });
-
-// export default Header;
-
 const Header = forwardRef((props, ref) => {
-  const [isCurrent, setCurrent] = useState("false");
   const { changePage, currentPage } = useContext(MenuContext);
 
-  const handleToggle = (page) => {
-    setCurrent(!isCurrent);
-    ref.current.scrollTo(changePage(page));
+  useEffect(() => {
+    ref.current.scrollTo(currentPage);
+    console.log("useEffect has triggered because current page has changed");
+  }, [currentPage, ref]);
+
+  const handleToggle = (newPage) => {
+    changePage(newPage);
   };
 
   return (

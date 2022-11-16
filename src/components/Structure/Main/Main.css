@@ -2,11 +2,13 @@ main {
   padding: 2rem;
   max-width: 1080px;
   margin: auto;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 section {
   padding: 2rem;
+  min-height: 50vh;
+  text-align: left;
 }
 
 p,
@@ -51,12 +53,13 @@ section.book.content {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  text-align: center;
 }
 
 section.skinny {
   max-width: 1080px;
   margin-left: auto;
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 .content-item {

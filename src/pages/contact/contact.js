@@ -19,30 +19,31 @@ export const Contact = ({ initialValues }) => {
     subject: "",
     message: "",
   };
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => {
-    console.log("form data", data);
-    reset(defaultValues);
-  };
-  const handleError = (errors) => {
-    console.log(errors);
-  };
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   reset,
+  //   formState: { errors },
+  // } = useForm();
+  // const onSubmit = (data) => {
+  //   console.log("form data", data);
+  //   reset(defaultValues);
+  // };
+  // const handleError = (errors) => {
+  //   console.log(errors);
+  // };
 
-  const registerOptions = {
-    name: { required: "Name is required" },
-    email: {
-      required: true,
-      pattern: /^\S+@\S+$/i,
-      message: "Email is required",
-    },
-    subject: { required: "Subject is required" },
-    message: { required: "Message is required" },
-  };
+  // const registerOptions = {
+  //   name: { required: "Name is required" },
+  //   email: {
+  //     required: true,
+  //     pattern: /^\S+@\S+$/i,
+  //     message: "Email is required",
+  //   },
+  //   subject: { required: "Subject is required" },
+  //   message: { required: "Message is required" },
+  // };
+
   // console.log(errors);
   return (
     <>
@@ -52,7 +53,39 @@ export const Contact = ({ initialValues }) => {
           regarding massage or your treatment with me, please fill in the form
           below.
         </p>
-        <form onSubmit={handleSubmit(onSubmit, handleError)}>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label>
+              Name: <input type="text" name="name" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Email: <input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message"></textarea>
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+        {/* <form
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit(onSubmit, handleError)}
+          name="contact"
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <input
             type="text"
             placeholder="Name"
@@ -88,7 +121,7 @@ export const Contact = ({ initialValues }) => {
             {errors?.message && errors.message}
           </small>
           <button type="submit">Send</button>
-        </form>
+        </form> */}
       </section>
     </>
   );

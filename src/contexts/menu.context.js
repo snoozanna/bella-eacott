@@ -24,6 +24,7 @@ export const MenuProvider = (props) => {
   console.log("current page in context", currentPage);
   const changePage = (page) => {
     setCurrentPage(page);
+    //scrollTo here?
     return page;
   };
 
