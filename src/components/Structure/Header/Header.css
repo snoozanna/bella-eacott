@@ -62,12 +62,16 @@ nav > ul {
   font-size: 3rem;
 }
 
+.facesolo {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  header {
+  /* header {
     padding: 2rem 2rem 0 2rem;
     min-height: fit-content;
     font-size: 1.6rem;
-  }
+  } */
 
   nav {
     max-width: 100%;
@@ -100,5 +104,44 @@ nav > ul {
   .current {
     color: var(--yellow);
     font-size: 2rem;
+  }
+
+  header {
+    padding: 2rem 2rem 1rem 2rem;
+    min-height: fit-content;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    color: var(--blue);
+  }
+
+  header > h1 {
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 2.5rem;
+    max-width: 50%;
+  }
+
+  #hamburger-button {
+    padding: 0;
+  }
+
+  ul.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
+    background-color: var(--blue);
+    margin-top: 2rem;
+  }
+
+  .MuiPaper-root {
+    box-shadow: none;
+    background-color: var(--blue) !important;
+    border: none;
+  }
+
+  .facesolo {
+    display: initial;
+    max-width: 50px;
+  }
+  .treatments {
+    display: flex;
+    flex-direction: column;
   }
 }

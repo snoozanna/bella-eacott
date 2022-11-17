@@ -8,7 +8,7 @@ export const Home = () => {
         <img
           src={img}
           alt="Bella sitting in a chair, with her eyes closed, on a balcony facing the sun. In black and white."
-          class="bella"
+          className="bella"
         />
         <div className="description">
           Sports, deep tissue, relaxing, pregnancy and remedial massage across

@@ -3,6 +3,7 @@ export const Expect = () => {
   return (
     <>
       <section className="expect content skinny">
+        <h2 className="pageNameMobile">Treatments & What to Expect</h2>
         <div className="content-item">
           <p>
             Massages will always be tailored to you and what you need, and every

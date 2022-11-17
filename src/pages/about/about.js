@@ -1,11 +1,13 @@
 import { forwardRef, useContext } from "react";
 import { MenuContext } from "./../../contexts/menu.context";
+import "./about.css";
 
 const About = forwardRef((props, ref) => {
   const { changePage } = useContext(MenuContext);
   return (
     <>
       <section className="about content skinny">
+        <h2 className="pageNameMobile">About me</h2>
         <div className="content-item">
           <p>
             I qualified as a massage therapist in 2018, beginning my studies in

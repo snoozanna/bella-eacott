@@ -5,6 +5,7 @@ const Book = () => {
   return (
     <>
       <section className="book content">
+        <h2 className="pageNameMobile">Book me</h2>
         <p className="content-item">
           I see clients at the beautiful{" "}
           <a

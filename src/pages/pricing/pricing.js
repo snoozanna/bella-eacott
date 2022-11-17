@@ -7,6 +7,7 @@ const Pricing = () => {
   return (
     <>
       <section className="pricing content skinny">
+        <h2 className="pageNameMobile">Pricing</h2>
         <div className="content-item">
           <p>
             Whatever kind of massage you would like, treatments are priced by

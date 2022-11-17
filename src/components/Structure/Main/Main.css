@@ -73,6 +73,10 @@ section.skinny {
   margin-inline-end: 0;
 }
 
+.pageNameMobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   main {
     padding: 2rem;
@@ -80,12 +84,8 @@ section.skinny {
   }
   section {
     padding: 2rem;
-    min-height: 50vh;
+    /* height: 100vh; */
     text-align: left;
-  }
-
-  section:last-child {
-    margin-block-end: 5rem;
   }
 
   section.home.content,
@@ -112,8 +112,24 @@ section.skinny {
     margin-top: 10vh;
   }
 
+  section.pricing.content,
+  section.contact.content {
+    align-items: flex-start;
+  }
+
+  section.contact.content > .content-item:last-child {
+    margin-block-end: 20rem;
+  }
+
   .content-item {
     margin-inline-end: 0;
     width: 100%;
+  }
+
+  .pageNameMobile {
+    display: initial;
+    text-transform: uppercase;
+    color: var(--yellow);
+    font-size: 3rem;
   }
 }

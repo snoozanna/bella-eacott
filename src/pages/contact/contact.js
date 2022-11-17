@@ -67,6 +67,7 @@ export const Contact = ({ initialValues }) => {
   return (
     <>
       <section className="contact content skinny">
+        <h2 className="pageNameMobile">Contact me</h2>
         <div className="content-item">
           <p>
             If you’d like to discuss your appointment or have any questions
