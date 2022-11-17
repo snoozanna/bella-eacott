@@ -58,3 +58,10 @@ form > button:disabled {
   /* height: 54px; */
   background: #fff;
 }
+
+@media (max-width: 768px) {
+  input,
+  textarea {
+    padding: 1rem;
+  }
+}

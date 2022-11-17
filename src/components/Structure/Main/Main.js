@@ -15,7 +15,7 @@ const Main = forwardRef((props, ref) => {
   // console.log("container in Main", ref.current.container);
   return (
     <>
-      <main className={"test"}>
+      <main>
         {props.children}
         <Parallax
           pages={6}

@@ -1,12 +1,17 @@
-.greenBottleWrapper {
+/* .greenBottleWrapper {
+  background-color: aliceblue;
+  padding: 1rem;
+} */
+.greenBottleContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
   /* width: 50%; */
 }
 
-.greenBottleWrapper > .bottle {
+.greenBottleContainer > .bottle {
   max-width: 150px;
 }
 
@@ -32,4 +37,13 @@
   flex-direction: column;
   gap: 1rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .greenBottleContainer {
+  }
+
+  .greenBottleContainer > .bottle {
+    max-width: 30%;
+  }
 }

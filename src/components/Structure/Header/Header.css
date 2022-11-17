@@ -61,3 +61,44 @@ nav > ul {
   color: var(--yellow);
   font-size: 3rem;
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 2rem 0 2rem;
+    min-height: fit-content;
+    font-size: 1.6rem;
+  }
+
+  nav {
+    max-width: 100%;
+    font-size: 1.6rem;
+    padding: 0;
+  }
+
+  .logoWrapper > img.logo {
+    max-width: 100px;
+    display: none;
+  }
+
+  nav > ul {
+    padding: 1rem;
+    margin-block-end: 0;
+  }
+
+  .nav-item {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-item > li {
+    width: inherit;
+    margin-inline-end: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid var(--blue);
+  }
+
+  .current {
+    color: var(--yellow);
+    font-size: 2rem;
+  }
+}

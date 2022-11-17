@@ -13,8 +13,12 @@ const Pricing = () => {
             length:
           </p>
           <ul>
-            <li>60 minutes: £75</li>
-            <li>90 minutes: £90</li>
+            <li>
+              <h3>60 minutes: £75</h3>
+            </li>
+            <li>
+              <h3>90 minutes: £90</h3>
+            </li>
           </ul>
 
           <p>
@@ -37,7 +41,8 @@ const Pricing = () => {
         <div className="content-item bottle">
           <h3>THE GREEN BOTTLE</h3>
           <span>Where you fall on the sliding scale</span>
-          <div className="greenBottleWrapper">
+          {/* <div className="greenBottleWrapper"> */}
+          <div className="greenBottleContainer">
             <div className="priviledge scale">Financial priviledge</div>
             <img
               src={green1}
@@ -55,9 +60,9 @@ const Pricing = () => {
               className="bottle"
             />
           </div>
-          <div>
-            <div className="scale"> Personal Financial Experience</div>
-          </div>
+          <div className="scale"> Personal Financial Experience</div>
+          {/* </div> */}
+
           <p className="explanation">
             Basic needs include food, housing and transportation. Expendable
             income might mean that you are able to buy a coffee or tea at a

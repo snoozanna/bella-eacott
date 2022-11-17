@@ -5,3 +5,13 @@
 .expect-item:first-child {
   margin-inline-end: 1rem;
 }
+
+@media (max-width: 768px) {
+  .expect-item {
+    width: 100%;
+  }
+
+  .expect-item:first-child {
+    margin-inline-end: 0;
+  }
+}

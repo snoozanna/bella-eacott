@@ -5,6 +5,19 @@
   width: 40%;
 }
 
-img {
+img.bella {
   width: 60%;
+}
+
+@media (max-width: 768px) {
+  img.bella {
+    width: 100%;
+  }
+
+  .description {
+    font-size: 3rem;
+    margin-block-end: 3rem;
+    padding: 0;
+    width: 100%;
+  }
 }

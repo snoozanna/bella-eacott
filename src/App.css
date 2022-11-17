@@ -82,8 +82,8 @@ button.withinText {
   padding: 0;
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .App {
     display: none;
   }
-}
+} */
