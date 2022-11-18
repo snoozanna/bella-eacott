@@ -2,6 +2,7 @@ import "./book.css";
 
 const Book = () => {
   // console.log("ref in book", ref);
+
   return (
     <>
       <section className="book content">
@@ -20,13 +21,13 @@ const Book = () => {
         </p>
         <p className="content-item">You can book below:</p>
         <div className="bookingWidget content-item">
-          <iframe
+          {/* <iframe
             src="https://app.squarespacescheduling.com/schedule.php?owner=27159191"
             title="Schedule Appointment"
             width="100%"
             height="800"
             frameBorder="0"
-          ></iframe>
+          ></iframe> */}
           <script
             src="https://embed.acuityscheduling.com/js/embed.js"
             type="text/javascript"

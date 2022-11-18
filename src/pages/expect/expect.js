@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./expect.css";
 export const Expect = () => {
   return (

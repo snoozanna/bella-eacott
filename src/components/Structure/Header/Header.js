@@ -12,8 +12,22 @@ import "./Header.css";
 const Header = forwardRef((props, ref) => {
   const { changePage, currentPage } = useContext(MenuContext);
   const [anchorEl, setAnchorEl] = useState(null);
+  const [small, setSmall] = useState(false);
   const matches = useMediaQuery("(max-width:768px)");
   const open = Boolean(anchorEl);
+
+  //TODO FIX THIS
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        console.log("small logo required");
+        setSmall(window.pageYOffset > 200);
+      });
+    } else {
+      console.log("issue with window", window);
+    }
+  }, []);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -99,7 +113,7 @@ const Header = forwardRef((props, ref) => {
         </header>
       ) : (
         <>
-          <header className="desktop">
+          <header className={`desktop ${small ? "small" : ""}`}>
             <nav>
               <ul className="nav-item">
                 <li

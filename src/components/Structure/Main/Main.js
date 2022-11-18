@@ -1,4 +1,4 @@
-import { forwardRef, useContext } from "react";
+import { forwardRef, useContext, useEffect, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { MenuContext } from "./../../../contexts/menu.context";
 import Home from "./../../../pages/home/home";
@@ -12,16 +12,21 @@ import "./Main.css";
 
 // Using forwardRef
 const Main = forwardRef((props, ref) => {
-  // console.log("container in Main", ref.current.container);
+  const onScroll = (e) => console.log("hello", e);
+  // console.log(ref.current.current / ref.current.space);
+  window.addEventListener("scroll", console.log("changed"));
+
   return (
     <>
       <main>
         {props.children}
+
         <Parallax
-          pages={7}
+          pages={7.5}
           style={{ top: "0", left: "0" }}
           ref={ref}
           factor={0.8}
+          onScroll={onScroll}
         >
           <ParallaxLayer
             offset={0.7}
