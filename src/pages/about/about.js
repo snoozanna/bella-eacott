@@ -1,12 +1,23 @@
-import { forwardRef, useContext } from "react";
+import { forwardRef, useContext, useEffect, useRef } from "react";
+import useIsVisible from '../../hooks/useIsVisibile'
 import { MenuContext } from "./../../contexts/menu.context";
 import "./about.css";
 
+
 const About = forwardRef((props, ref) => {
+
+  const pageRef = useRef(null)
+  const isInViewport = useIsVisible(pageRef);
+  useEffect(() => {
+    console.log('Viewport Detection', isInViewport)
+  }, [isInViewport])
+
+
+
   const { changePage } = useContext(MenuContext);
   return (
     <>
-      <section className="about content skinny">
+      <section className="about content skinny" ref={pageRef}>
         <h2 className="pageNameMobile">About me</h2>
         <div className="content-item">
           <p>
