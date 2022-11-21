@@ -1,9 +1,22 @@
-import { useEffect } from "react";
+import { forwardRef, useContext, useEffect, useRef } from "react";
+import useIsVisible from "../../hooks/useIsVisible.js";
+import { MenuContext } from "./../../contexts/menu.context";
 import "./expect.css";
 export const Expect = () => {
+  const { changePage } = useContext(MenuContext);
+
+  const expectRef = useRef(null);
+  const isInViewport = useIsVisible(expectRef);
+  useEffect(() => {
+    if (isInViewport === true) {
+      console.log("we're looking at expect ");
+      changePage(2);
+    }
+  }, [isInViewport]);
+
   return (
     <>
-      <section className="expect content skinny">
+      <section className="expect content skinny" ref={expectRef}>
         <h2 className="pageNameMobile">Treatments & What to Expect</h2>
         <div className="content-item">
           <p>

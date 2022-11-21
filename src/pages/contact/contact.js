@@ -1,3 +1,7 @@
+import { forwardRef, useContext, useEffect, useRef } from "react";
+import useIsVisible from "../../hooks/useIsVisible.js";
+import { MenuContext } from "./../../contexts/menu.context";
+
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 // import { yupResolver } from "@hookform/resolvers/yup";
@@ -13,15 +17,26 @@ import { Button } from "@material-ui/core";
 // });
 
 export const Contact = ({ initialValues }) => {
+  const { changePage } = useContext(MenuContext);
   const [submitText, setSubmitText] = useState(null);
   const [buttonTxt, setButtonTxt] = useState("Send to Bella");
   const [buttonDisabled, setButtonDisabled] = useState(false);
+
+  const contactRef = useRef(null);
+  const isInViewport = useIsVisible(contactRef);
+  useEffect(() => {
+    if (isInViewport === true) {
+      console.log("we're looking at contact ");
+      changePage(6);
+    }
+  }, [isInViewport]);
   // const {
   //   register,
   //   handleSubmit,
   //   reset,
   //   formState: { errors },
   // } = useForm({ mode: "onBlur" });
+
   const onSubmit = async (event, setSubmitText) => {
     event.preventDefault();
     setSubmitText("Submitting ...");
@@ -66,7 +81,7 @@ export const Contact = ({ initialValues }) => {
 
   return (
     <>
-      <section className="contact content skinny">
+      <section className="contact content skinny" ref={contactRef}>
         <h2 className="pageNameMobile">Contact me</h2>
         <div className="content-item">
           <p>

@@ -1,12 +1,26 @@
+import { forwardRef, useContext, useEffect, useRef } from "react";
+import useIsVisible from "../../hooks/useIsVisible.js";
+import { MenuContext } from "./../../contexts/menu.context";
+
 import green1 from "./../../assets/img/green1.png";
 import green2 from "./../../assets/img/green2.png";
 import green3 from "./../../assets/img/green3.png";
 import "./pricing.css";
 
 const Pricing = () => {
+  const { changePage } = useContext(MenuContext);
+
+  const pricingRef = useRef(null);
+  const isInViewport = useIsVisible(pricingRef);
+  useEffect(() => {
+    if (isInViewport === true) {
+      console.log("we're looking at pricing ");
+      changePage(3.8);
+    }
+  }, [isInViewport]);
   return (
     <>
-      <section className="pricing content skinny">
+      <section className="pricing content skinny" ref={pricingRef}>
         <h2 className="pageNameMobile">Pricing</h2>
         <div className="content-item">
           <p>
