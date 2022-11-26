@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { forwardRef, useContext, useEffect, useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Button from "@mui/material/Button";
@@ -9,19 +9,23 @@ import logo from "./../../../assets/img/bella-logo-bg.png";
 import facesolo from "./../../../assets/img/faceSolo.png";
 import "./Header.css";
 
-const Header = forwardRef((props, ref) => {
+const Header = () => {
   const { changePage, currentPage } = useContext(MenuContext);
+  // const { homeRef, aboutRef, bookRef, contactRef, expectRef, pricingRef } =
+  //   ref.current;
   const [anchorEl, setAnchorEl] = useState(null);
   const [small, setSmall] = useState(false);
   const matches = useMediaQuery("(max-width:768px)");
   const open = Boolean(anchorEl);
 
+  // console.log("ref in header", ref);
+
   //TODO FIX THIS
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => {
-        console.log("small logo required");
         setSmall(window.pageYOffset > 200);
+        // console.log("small logo required");
       });
     } else {
       console.log("issue with window", window);
@@ -33,17 +37,21 @@ const Header = forwardRef((props, ref) => {
   };
 
   const handleClose = () => {
-    console.log("anchorEl", anchorEl);
     setAnchorEl(null);
   };
 
-  useEffect(() => {
-    ref.current.scrollTo(currentPage);
-  }, [currentPage, ref]);
+  // useEffect(() => {
+  //   ref.current.scrollTo(currentPage);
+  // }, [currentPage, ref]);
 
-  const handleToggle = (newPage) => {
+  // const handleToggle = (newPage) => {
+  //   changePage(newPage);
+  // };
+
+  const handleToggle = (ref) => {
+    console.log("ref in toggle", ref);
     setAnchorEl(null);
-    changePage(newPage);
+    ref.current.scrollIntoView();
   };
 
   const menuItemStyles = {
@@ -86,72 +94,149 @@ const Header = forwardRef((props, ref) => {
                 border: "none",
               }}
             >
-              <MenuItem onClick={() => handleToggle(0)} sx={menuItemStyles}>
-                Home
+              <MenuItem sx={menuItemStyles}>
+                <NavLink
+                  end
+                  to="/"
+                  style={({ isActive }) => ({
+                    color: isActive ? "var(--yellow)" : "var(--pink)",
+                  })}
+                >
+                  Home
+                </NavLink>
               </MenuItem>
-              <MenuItem onClick={() => handleToggle(1)} sx={menuItemStyles}>
-                About me
+              <MenuItem sx={menuItemStyles}>
+                <NavLink
+                  to="/about"
+                  style={({ isActive }) => ({
+                    color: isActive ? "var(--yellow)" : "var(--pink)",
+                  })}
+                >
+                  About me
+                </NavLink>
               </MenuItem>
-              <MenuItem onClick={() => handleToggle(2)} sx={menuItemStyles}>
-                <div className="treatments">
-                  <span>Treatments & </span>
-                  <span>What to Expect</span>
-                </div>
+              <MenuItem sx={menuItemStyles}>
+                <NavLink
+                  to="/what-to-expect"
+                  style={({ isActive }) => ({
+                    color: isActive ? "var(--yellow)" : "var(--pink)",
+                  })}
+                >
+                  <div className="treatments">
+                    <span>Treatments & </span>
+                    <span>What to Expect</span>
+                  </div>
+                </NavLink>
               </MenuItem>
-              <MenuItem onClick={() => handleToggle(3.8)} sx={menuItemStyles}>
-                Pricing
+              <MenuItem sx={menuItemStyles}>
+                {" "}
+                <NavLink
+                  to="/pricing"
+                  style={({ isActive }) => ({
+                    color: isActive ? "var(--yellow)" : "var(--pink)",
+                  })}
+                >
+                  Pricing
+                </NavLink>
               </MenuItem>
-              <MenuItem onClick={() => handleToggle(5)} sx={menuItemStyles}>
-                Book me
+              <MenuItem sx={menuItemStyles}>
+                {" "}
+                <NavLink
+                  to="/book"
+                  style={({ isActive }) => ({
+                    color: isActive ? "var(--yellow)" : "var(--pink)",
+                  })}
+                >
+                  Book me
+                </NavLink>
               </MenuItem>
-              <MenuItem onClick={() => handleToggle(6)} sx={menuItemStyles}>
-                Contact me
+              <MenuItem sx={menuItemStyles}>
+                <NavLink
+                  to="/contact"
+                  style={({ isActive }) => ({
+                    color: isActive ? "var(--yellow)" : "var(--pink)",
+                  })}
+                >
+                  Contact me
+                </NavLink>
               </MenuItem>
             </Menu>
           </div>
-          <h1>Bella Eacott Massage</h1>
+          <Link to="/">
+            <h1>Bella Eacott Massage</h1>
+          </Link>
         </header>
       ) : (
         <>
           <header className={`desktop ${small ? "small" : ""}`}>
             <nav>
               <ul className="nav-item">
-                <li
-                  onClick={() => handleToggle(0)}
-                  className={currentPage === 0 ? "current" : ""}
-                >
-                  Home
+                <li>
+                  <NavLink
+                    end
+                    to="/"
+                    style={({ isActive }) => ({
+                      color: isActive ? "var(--yellow)" : "var(--blue)",
+                      fontSize: isActive ? "3rem" : "inherit",
+                    })}
+                  >
+                    Home
+                  </NavLink>
                 </li>
-                <li
-                  onClick={() => handleToggle(1)}
-                  className={currentPage === 1 ? "current" : ""}
-                >
-                  About me
+                <li>
+                  <NavLink
+                    to="/about"
+                    style={({ isActive }) => ({
+                      color: isActive ? "var(--yellow)" : "var(--blue)",
+                      fontSize: isActive ? "3rem" : "inherit",
+                    })}
+                  >
+                    About me
+                  </NavLink>
                 </li>
-                <li
-                  onClick={() => handleToggle(2)}
-                  className={currentPage === 2 ? "current" : ""}
-                >
-                  {" "}
-                  Treatments & What to Expect
+                <li>
+                  <NavLink
+                    to="/what-to-expect"
+                    style={({ isActive }) => ({
+                      color: isActive ? "var(--yellow)" : "var(--blue)",
+                      fontSize: isActive ? "3rem" : "inherit",
+                    })}
+                  >
+                    Treatments & What to Expect
+                  </NavLink>
                 </li>
-                <li
-                  onClick={() => handleToggle(3)}
-                  className={currentPage === 3 ? "current" : ""}
-                >
-                  Pricing
+                <li>
+                  <NavLink
+                    to="/pricing"
+                    style={({ isActive }) => ({
+                      color: isActive ? "var(--yellow)" : "var(--blue)",
+                      fontSize: isActive ? "3rem" : "inherit",
+                    })}
+                  >
+                    Pricing
+                  </NavLink>
                 </li>
-                <li
-                  onClick={() => handleToggle(4)}
-                  className={currentPage === 4 ? "current" : ""}
-                >
-                  Book me
+                <li>
+                  <NavLink
+                    to="/book"
+                    style={({ isActive }) => ({
+                      color: isActive ? "var(--yellow)" : "var(--blue)",
+                      fontSize: isActive ? "3rem" : "inherit",
+                    })}
+                  >
+                    Book me
+                  </NavLink>
                 </li>
-                <li
-                  onClick={() => handleToggle(5)}
-                  className={currentPage === 5 ? "current" : ""}
-                >
-                  Contact me
+                <li>
+                  <NavLink
+                    to="/contact"
+                    style={({ isActive }) => ({
+                      color: isActive ? "var(--yellow)" : "var(--blue)",
+                      fontSize: isActive ? "3rem" : "inherit",
+                    })}
+                  >
+                    Contact me
+                  </NavLink>
                 </li>
               </ul>
             </nav>
@@ -160,7 +245,7 @@ const Header = forwardRef((props, ref) => {
             <img
               src={logo}
               alt="logo"
-              className="logo circle"
+              className="logo "
               onClick={() => handleToggle(0)}
             />
           </div>
@@ -168,6 +253,6 @@ const Header = forwardRef((props, ref) => {
       )}
     </>
   );
-});
+};
 
 export default Header;

@@ -21,10 +21,10 @@ export const MenuProvider = (props) => {
   const [currentPage, setCurrentPage] = useState(0);
   // const open = () => setState(true);
   // const close = () => setState(false);
-  console.log("current page in context", currentPage);
+  // console.log("current page in context", currentPage);
   const changePage = (page) => {
     setCurrentPage(page);
-    //scrollTo here?
+
     return page;
   };
 

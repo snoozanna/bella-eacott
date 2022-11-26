@@ -6,7 +6,9 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
+import "../../components/Structure/Main/Main.js";
 import "./contact.css";
+
 import { Button } from "@material-ui/core";
 
 // const schema = yup.object().shape({
@@ -21,15 +23,16 @@ export const Contact = ({ initialValues }) => {
   const [submitText, setSubmitText] = useState(null);
   const [buttonTxt, setButtonTxt] = useState("Send to Bella");
   const [buttonDisabled, setButtonDisabled] = useState(false);
+  // console.log("ref in contact", ref);
+  // const { contactRef } = ref.current;
+  // const isInViewport = useIsVisible(contactRef);
 
-  const contactRef = useRef(null);
-  const isInViewport = useIsVisible(contactRef);
-  useEffect(() => {
-    if (isInViewport === true) {
-      console.log("we're looking at contact ");
-      changePage(6);
-    }
-  }, [isInViewport]);
+  // useEffect(() => {
+  //   if (isInViewport === true) {
+  //     console.log("we're looking at contact ");
+  //     changePage(5);
+  //   }
+  // }, [isInViewport]);
   // const {
   //   register,
   //   handleSubmit,
@@ -81,79 +84,85 @@ export const Contact = ({ initialValues }) => {
 
   return (
     <>
-      <section className="contact content skinny" ref={contactRef}>
-        <h2 className="pageNameMobile">Contact me</h2>
-        <div className="content-item">
-          <p>
-            If you’d like to discuss your appointment or have any questions
-            regarding massage or your treatment with me, please fill in this
-            form:
-          </p>
-        </div>
-        <div className="content-item">
-          <form
-            id="contact"
-            name="contact-form"
-            method="POST"
-            data-netlify="true"
-            onSubmit={(e) => onSubmit(e, setSubmitText)}
-          >
-            <p style={{ display: "none" }}>
-              <label>
-                Don’t fill this out if you expect to hear from me!
-                <input name="bot-field" />
-              </label>
+      <main>
+        <section className="contact content skinny">
+          <h2 className="pageNameMobile">Contact me</h2>
+          <div className="content-item">
+            <p>
+              If you’d like to discuss your appointment or have any questions
+              regarding massage or your treatment with me, please fill in this
+              form:
             </p>
-            <input
-              style={{ display: "none" }}
-              name="form-name"
-              value="contact-form"
-              readOnly={true}
-            />
-
-            <button type="submit" name="SendMessage" disabled={buttonDisabled}>
-              {buttonTxt}
-            </button>
-            <div>
-              <label htmlFor="name">
-                <p>Name: </p>
-              </label>
+          </div>
+          <div className="content-item">
+            <form
+              id="contact"
+              name="contact-form"
+              method="POST"
+              data-netlify="true"
+              onSubmit={(e) => onSubmit(e, setSubmitText)}
+            >
+              <p style={{ display: "none" }}>
+                <label>
+                  Don’t fill this out if you expect to hear from me!
+                  <input name="bot-field" />
+                </label>
+              </p>
               <input
-                type="text"
-                id="name"
-                name="name"
-                required={true}
-                className="form-control"
+                style={{ display: "none" }}
+                name="form-name"
+                value="contact-form"
+                readOnly={true}
               />
-            </div>
-            <div>
-              <label htmlFor="email">
-                <p>Email: </p>
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required={true}
-                className="form-control"
-              />
-            </div>
-            <div>
-              <label htmlFor="message">
-                <p>Message:</p>
-              </label>
-              <textarea
-                required={true}
-                id="message"
-                name="message"
-                className="form-control"
-              ></textarea>
-            </div>
 
-            {submitText}
-          </form>
-        </div>
-      </section>
+              <button
+                type="submit"
+                name="SendMessage"
+                disabled={buttonDisabled}
+              >
+                {buttonTxt}
+              </button>
+              <div>
+                <label htmlFor="name">
+                  <p>Name: </p>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required={true}
+                  className="form-control"
+                />
+              </div>
+              <div>
+                <label htmlFor="email">
+                  <p>Email: </p>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required={true}
+                  className="form-control"
+                />
+              </div>
+              <div>
+                <label htmlFor="message">
+                  <p>Message:</p>
+                </label>
+                <textarea
+                  required={true}
+                  id="message"
+                  name="message"
+                  className="form-control"
+                ></textarea>
+              </div>
+
+              {submitText}
+            </form>
+          </div>
+        </section>
+      </main>
     </>
   );
 };
