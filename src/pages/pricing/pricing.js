@@ -1,17 +1,10 @@
-import { forwardRef, useContext, useEffect, useRef } from "react";
-import useIsVisible from "../../hooks/useIsVisible.js";
-import { MenuContext } from "./../../contexts/menu.context";
-
 import green1 from "./../../assets/img/green1.png";
 import green2 from "./../../assets/img/green2.png";
 import green3 from "./../../assets/img/green3.png";
 import "../../components/Structure/Main/Main.js";
 import "./pricing.css";
 
-const Pricing = (props, ref) => {
-  const { changePage } = useContext(MenuContext);
-  // const { pricingRef } = ref.current;
-
+const Pricing = () => {
   // const isInViewport = useIsVisible(pricingRef);
   // useEffect(() => {
   //   if (isInViewport === true) {

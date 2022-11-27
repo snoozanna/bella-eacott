@@ -56,7 +56,23 @@
 }
 
 @media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: row;
+    background-color: var(--pink);
+    padding: 8px;
+    align-items: center;
+    left: var(--padding-mob);
+    border-radius: 2px;
+  }
   .footer-item > img.logo {
     max-width: 80px;
+  }
+  .footer-wrapper > span > a > img.social {
+    max-width: 2.5rem;
+    margin-inline-end: 1rem;
+  }
+  .footer-wrapper > span {
+    margin-block-end: 0;
+    align-items: center;
   }
 }

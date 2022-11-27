@@ -28,10 +28,6 @@
   margin-block-end: 1rem;
 }
 
-.content-item {
-  width: 49%;
-}
-
 .content-item.bottle {
   display: flex;
   flex-direction: column;

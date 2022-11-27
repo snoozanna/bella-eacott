@@ -1,10 +1,6 @@
-.expect-item {
-  width: 50%;
-}
-
-.expect-item:first-child {
+/* .expect-item:first-child {
   margin-inline-end: 1rem;
-}
+} */
 
 @media (max-width: 768px) {
   .expect-item {

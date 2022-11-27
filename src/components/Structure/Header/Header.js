@@ -1,24 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
-import { forwardRef, useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { MenuContext } from "../../../contexts/menu.context";
 import logo from "./../../../assets/img/bella-logo-bg.png";
 import facesolo from "./../../../assets/img/faceSolo.png";
 import "./Header.css";
 
 const Header = () => {
-  const { changePage, currentPage } = useContext(MenuContext);
-  // const { homeRef, aboutRef, bookRef, contactRef, expectRef, pricingRef } =
-  //   ref.current;
   const [anchorEl, setAnchorEl] = useState(null);
   const [small, setSmall] = useState(false);
   const matches = useMediaQuery("(max-width:768px)");
   const open = Boolean(anchorEl);
-
-  // console.log("ref in header", ref);
 
   //TODO FIX THIS
   useEffect(() => {
@@ -49,9 +43,7 @@ const Header = () => {
   // };
 
   const handleToggle = (ref) => {
-    console.log("ref in toggle", ref);
     setAnchorEl(null);
-    ref.current.scrollIntoView();
   };
 
   const menuItemStyles = {
@@ -68,6 +60,7 @@ const Header = () => {
   return (
     <>
       {matches ? (
+        // MOBILE VERSION
         <header>
           <div>
             <Button
@@ -92,6 +85,7 @@ const Header = () => {
                 // backgroundColor: "var(--blue)",
                 boxShadow: "none",
                 border: "none",
+                top: "30px",
               }}
             >
               <MenuItem sx={menuItemStyles}>
@@ -167,6 +161,7 @@ const Header = () => {
           </Link>
         </header>
       ) : (
+        // MOBILE VERSION
         <>
           <header className={`desktop ${small ? "small" : ""}`}>
             <nav>
