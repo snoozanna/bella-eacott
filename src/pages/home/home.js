@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import img from "./../../assets/img/Bella.JPG";
 import "../../components/Structure/Main/Main.js";
 import "./home.css";
