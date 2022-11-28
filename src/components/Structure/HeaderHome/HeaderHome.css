@@ -78,7 +78,7 @@ nav > ul {
     /* text-transform: uppercase; */
     font-family: var(--font-reg);
     color: var(--blue);
-    background-color: transparent;
+    background-color: var(--pink);
   }
 
   nav {
@@ -146,5 +146,14 @@ nav > ul {
   .treatments {
     display: flex;
     flex-direction: column;
+  }
+
+  header > .description {
+    text-align: right;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  header > .description > p {
+    margin-bottom: 0;
   }
 }

@@ -58,11 +58,12 @@
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-direction: row;
-    background-color: var(--pink);
+    background-color: var(--orange);
     padding: 8px;
     align-items: center;
     left: var(--padding-mob);
     border-radius: 2px;
+    transform: skewY(-2deg);
   }
   .footer-item > img.logo {
     max-width: 80px;

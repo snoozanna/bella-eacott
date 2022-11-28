@@ -16,27 +16,44 @@ img.bella {
   }
 
   .description {
-    font-size: 2.5rem;
+    width: 80%;
+  }
+
+  .description > p {
+    font-size: 1.7rem;
     margin-block-end: 3rem;
     padding: 0;
     width: 100%;
+    line-height: 2rem;
+    /* text-align: center; */
   }
 
   .homeMenu {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
   }
   .homeMenuItem {
     background-color: var(--orange);
     text-transform: uppercase;
     font-family: var(--font-bold);
+    font-size: 1.8rem;
     color: var(--blue);
     padding: 8px;
     transform: skewY(-2deg);
   }
-  .homeMenuItem > a {
+
+  .homeLogoWrapper {
+    /* position: relative;
+    width: 80%;
+    height: 100%; */
+    max-width: 400px;
+  }
+  .logo.mob {
+    /* width: 100%; */
+    /* z-index: 9999; */
+    /* position: absolute; */
   }
 }

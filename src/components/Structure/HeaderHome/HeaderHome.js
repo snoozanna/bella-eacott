@@ -5,10 +5,11 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "./../../../assets/img/bella-logo-bg.png";
-import facesolo from "./../../../assets/img/faceSolo.png";
-import "./Header.css";
 
-const Header = () => {
+import facesolo from "./../../../assets/img/faceSolo.png";
+import "./HeaderHome.css";
+
+const HeaderHome = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [small, setSmall] = useState(false);
   const matches = useMediaQuery("(max-width:768px)");
@@ -156,9 +157,12 @@ const Header = () => {
               </MenuItem>
             </Menu>
           </div>
-          <Link className={"title"} to="/">
-            <h1>Bella Eacott Massage</h1>
-          </Link>
+          <div className="description">
+            <p>
+              Sports, deep tissue, relaxing, pregnancy and remedial massage
+              across London.
+            </p>
+          </div>
         </header>
       ) : (
         // DESKTOP VERSION
@@ -250,4 +254,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderHome;

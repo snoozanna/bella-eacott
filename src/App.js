@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { MenuProvider } from "./contexts/menu.context";
 import Header from "./components/Structure/Header/Header";
+import HeaderHome from "./components/Structure/HeaderHome/HeaderHome";
 import Footer from "./components/Structure/Footer/Footer";
 import Home from "./pages/home/home";
 import Book from "./pages/book/book";
@@ -19,7 +20,12 @@ function App() {
   return (
     <MenuProvider>
       <Router>
-        {window.location.pathname !== "/landing" ? <Header /> : null}
+        {window.location.pathname === "/landing" ? null : "/" ? (
+          <HeaderHome />
+        ) : (
+          <Header />
+        )}
+
         <Routes>
           <Route path="/landing" element={<Landing />} />
           <Route index element={<Home />} />
