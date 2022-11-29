@@ -1,27 +1,16 @@
-import { forwardRef, useContext, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import useIsVisible from "../../hooks/useIsVisible.js";
-import { MenuContext } from "./../../contexts/menu.context";
 
-import Header from "./../../components/Structure/Header/Header.js";
-import Footer from "./../../components/Structure/Footer/Footer.js";
 import "../../components/Structure/Main/Main.js";
 import "./book.css";
 
-const Book = (props, ref) => {
-  const { changePage } = useContext(MenuContext);
-  // const { bookRef } = ref.current;
-  // const isInViewport = useIsVisible(bookRef);
-  // useEffect(() => {
-  //   if (isInViewport === true) {
-  //     console.log("we're looking at book ");
-  //     changePage(4);
-  //   }
-  //   console.log("Viewport Detection About", isInViewport);
-  // }, [isInViewport]);
+const Book = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("book");
+  }, []);
 
   return (
     <>
-      <Header />
       <main>
         <section className="book content">
           <h2 className="pageNameMobile">Book me</h2>
@@ -53,7 +42,6 @@ const Book = (props, ref) => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

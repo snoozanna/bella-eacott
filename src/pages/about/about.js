@@ -1,28 +1,18 @@
-import { useContext, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useIsVisible from "../../hooks/useIsVisible.js";
-import { MenuContext } from "./../../contexts/menu.context";
 import Header from "./../../components/Structure/Header/Header.js";
 import Footer from "./../../components/Structure/Footer/Footer.js";
 import img from "./../../assets/img/Bella.JPG";
 import "./about.css";
 
-const About = () => {
-  const { changePage } = useContext(MenuContext);
-  // const { aboutRef } = ref.current;
-
-  // const isInViewport = useIsVisible(aboutRef);
-  // useEffect(() => {
-  //   if (isInViewport === true) {
-  //     console.log("we're looking at about ");
-  //     changePage(1);
-  //   }
-  //   console.log("Viewport Detection About", isInViewport);
-  // }, [isInViewport]);
+const About = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("about");
+  }, []);
 
   return (
     <>
-      <Header />
       <main>
         <section className="about content skinny">
           <h2 className="pageNameMobile">About me</h2>
@@ -75,7 +65,6 @@ const About = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

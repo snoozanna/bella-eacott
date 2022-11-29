@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "./../../components/Structure/Header/Header.js";
 import Footer from "./../../components/Structure/Footer/Footer.js";
 import green1 from "./../../assets/img/green1.png";
@@ -6,17 +7,12 @@ import green3 from "./../../assets/img/green3.png";
 import "../../components/Structure/Main/Main.js";
 import "./pricing.css";
 
-const Pricing = () => {
-  // const isInViewport = useIsVisible(pricingRef);
-  // useEffect(() => {
-  //   if (isInViewport === true) {
-  //     console.log("we're looking at pricing ");
-  //     changePage(3);
-  //   }
-  // }, [isInViewport]);
+const Pricing = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("pricing");
+  }, []);
   return (
     <>
-      <Header />
       <main>
         <section className="pricing content skinny">
           <h2 className="pageNameMobile">Pricing</h2>

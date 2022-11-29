@@ -56,6 +56,7 @@ img.bella {
     grid-template-rows: 1fr;
     grid-template-areas: "a";
     margin-block-end: 2rem;
+    width: 90%;
   }
   .logo.mob.inner {
     grid-area: a;

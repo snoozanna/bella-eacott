@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { NavLink } from "react-router-dom";
 import SEO from "./../../components/Structure/SEO/SEO.js";
@@ -7,7 +8,11 @@ import insta from "./../../assets/img/insta.png";
 
 // import { Link } from "react-router-dom";
 
-const Landing = () => {
+const Landing = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("landing");
+  }, []);
+
   const anim1 = useSpring({
     to: { scale: 1.1 },
     from: { scale: 1 },
@@ -57,7 +62,7 @@ const Landing = () => {
         </p>
       </header> */}
 
-      <div class="landingWrapper">
+      <div className="landingWrapper">
         <div className="hero">
           <NavLink to="/">
             <div className="taglineWrapper">

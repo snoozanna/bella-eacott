@@ -1,22 +1,14 @@
-import Header from "./../../components/Structure/Header/Header.js";
-import Footer from "./../../components/Structure/Footer/Footer.js";
+import { useEffect } from "react";
 import "../../components/Structure/Main/Main.js";
 import "./expect.css";
 
-export const Expect = () => {
-  // const { expectRef } = ref.current;
-
-  // const isInViewport = useIsVisible(expectRef);
-  // useEffect(() => {
-  //   if (isInViewport === true) {
-  //     console.log("we're looking at expect ");
-  //     changePage(2);
-  //   }
-  // }, [isInViewport]);
+export const Expect = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("expect");
+  }, []);
 
   return (
     <>
-      <Header />
       <main>
         <section className="expect content skinny">
           <h2 className="pageNameMobile">Treatments & What to Expect</h2>
@@ -87,7 +79,6 @@ export const Expect = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { NavLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -11,7 +12,11 @@ import img from "./../../assets/img/Bella.JPG";
 import "../../components/Structure/Main/Main.js";
 import "./home.css";
 
-export const Home = () => {
+export const Home = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("home");
+  }, []);
+
   const matches = useMediaQuery("(max-width:768px)");
   const turn = useSpring({
     to: { rotateZ: 0 },
@@ -31,7 +36,6 @@ export const Home = () => {
       {matches ? (
         // MOBILE VERSION
         <>
-          <HeaderHome />
           <main className="home">
             <section className="home content" href="#home">
               <div className="homeLogoWrapper">
@@ -133,7 +137,6 @@ export const Home = () => {
       ) : (
         // DESKTOP VERSION
         <>
-          <HeaderHome />
           <main className="home">
             <section className="home content" href="#home">
               <img

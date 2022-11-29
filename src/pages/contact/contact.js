@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 import { MenuContext } from "./../../contexts/menu.context";
 import { useForm } from "react-hook-form";
 
@@ -19,8 +19,10 @@ import { Button } from "@material-ui/core";
 //   category: yup.mixed().oneOf(productCategories).required(),
 // });
 
-export const Contact = ({ initialValues }) => {
-  const { changePage } = useContext(MenuContext);
+const Contact = ({ setHeaderStatus }) => {
+  useEffect(() => {
+    setHeaderStatus("contact");
+  }, []);
   const [submitText, setSubmitText] = useState(null);
   const [buttonTxt, setButtonTxt] = useState("Send to Bella");
   const [buttonDisabled, setButtonDisabled] = useState(false);
@@ -85,7 +87,6 @@ export const Contact = ({ initialValues }) => {
 
   return (
     <>
-      <Header />
       <main>
         <section className="contact content skinny">
           <h2 className="pageNameMobile">Contact me</h2>
@@ -165,7 +166,6 @@ export const Contact = ({ initialValues }) => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };
