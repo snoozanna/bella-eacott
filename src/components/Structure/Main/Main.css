@@ -87,6 +87,12 @@ section.skinny {
     text-align: left;
   }
 
+  section.content {
+    width: 100%;
+    margin-top: 25%;
+    margin-bottom: 20vh;
+  }
+
   section.home.content,
   section.about.content,
   section.contact.content,
@@ -97,7 +103,8 @@ section.skinny {
   section.home.content {
     justify-content: flex-end;
     display: flex;
-    margin-top: 18vh;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
   }
 
   section.expect.content,
@@ -107,11 +114,6 @@ section.skinny {
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
-  }
-
-  section.content,
-  section.home.content {
-    margin-bottom: 20vh;
   }
 
   section.pricing.content,

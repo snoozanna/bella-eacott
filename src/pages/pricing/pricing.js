@@ -1,3 +1,5 @@
+import Header from "./../../components/Structure/Header/Header.js";
+import Footer from "./../../components/Structure/Footer/Footer.js";
 import green1 from "./../../assets/img/green1.png";
 import green2 from "./../../assets/img/green2.png";
 import green3 from "./../../assets/img/green3.png";
@@ -14,6 +16,7 @@ const Pricing = () => {
   // }, [isInViewport]);
   return (
     <>
+      <Header />
       <main>
         <section className="pricing content skinny">
           <h2 className="pageNameMobile">Pricing</h2>
@@ -23,10 +26,10 @@ const Pricing = () => {
               length:
             </p>
             <ul>
-              <li>
+              <li className="massageType ">
                 <h3>60 minutes: £75</h3>
               </li>
-              <li>
+              <li className="massageType ">
                 <h3>90 minutes: £90</h3>
               </li>
             </ul>
@@ -82,6 +85,7 @@ const Pricing = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

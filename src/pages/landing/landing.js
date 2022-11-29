@@ -1,7 +1,11 @@
+import { useSpring, animated } from "react-spring";
+import { NavLink } from "react-router-dom";
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import "./landing.css";
 import face from "./../../assets/img/face.png";
-import { Link } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
+import insta from "./../../assets/img/insta.png";
+
+// import { Link } from "react-router-dom";
 
 const Landing = () => {
   const anim1 = useSpring({
@@ -36,27 +40,76 @@ const Landing = () => {
 
   return (
     <>
-      <div className="App landing">
-        <Link to="/">
-          <div className="hero">
-            <animated.span style={anim1} className="tagline">
-              LET'S
-            </animated.span>
-            <animated.span style={anim2} className="tagline">
-              FEEL
-            </animated.span>
-            <animated.span style={anim3} className="tagline">
-              NICE
-            </animated.span>
+      <SEO
+        title="Bella Eacott Massage"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="Bella Eacott Massage"
+        type="article"
+      />
+      {/* <header className="holding">
+        <h1>
+          Bella Eacott <span className="massage">Massage</span>{" "}
+        </h1>{" "}
+        <p className="description">
+          Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London.
+        </p>
+      </header> */}
+
+      <div class="landingWrapper">
+        <div className="hero">
+          <NavLink to="/">
+            <div className="taglineWrapper">
+              <animated.span style={anim1} className="tagline">
+                LET'S
+              </animated.span>
+              <animated.span style={anim2} className="tagline">
+                FEEL
+              </animated.span>
+              <animated.span style={anim3} className="tagline">
+                NICE
+              </animated.span>
+            </div>
+          </NavLink>
+          <NavLink to="/" className="navFace">
             <animated.img
               className="face"
               src={face}
               style={faceanim}
               alt="a little yellow paint splodge with a face inside it"
             />
-          </div>
-        </Link>
+          </NavLink>
+        </div>
       </div>
+
+      {/* <div className="description"></div> */}
+
+      {/* <footer>
+        <div className="footerItem">
+          <img src={insta} alt="instagram logo " />
+          <a
+            href="https://www.instagram.com/bellaeacott/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @bellaeacott
+          </a>
+        </div>
+        <div className="footerItem">
+          <span>
+            Book via{" "}
+            <a
+              href="https://bellaeacottmassage.as.me/schedule.php"
+              target="_blank"
+              rel="noreferrer"
+              className="highlighted"
+            >
+              Acuity
+            </a>
+          </span>
+        </div>
+      </footer> */}
     </>
   );
 };

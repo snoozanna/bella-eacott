@@ -1,11 +1,9 @@
-import { forwardRef, useContext, useEffect } from "react";
-import useIsVisible from "../../hooks/useIsVisible.js";
-import { MenuContext } from "./../../contexts/menu.context";
+import Header from "./../../components/Structure/Header/Header.js";
+import Footer from "./../../components/Structure/Footer/Footer.js";
 import "../../components/Structure/Main/Main.js";
 import "./expect.css";
 
 export const Expect = () => {
-  const { changePage } = useContext(MenuContext);
   // const { expectRef } = ref.current;
 
   // const isInViewport = useIsVisible(expectRef);
@@ -18,6 +16,7 @@ export const Expect = () => {
 
   return (
     <>
+      <Header />
       <main>
         <section className="expect content skinny">
           <h2 className="pageNameMobile">Treatments & What to Expect</h2>
@@ -28,25 +27,36 @@ export const Expect = () => {
               your needs, preferences, symptoms and medical history.
             </p>
 
-            <ul>
-              The kinds of treatment I offer include:
+            <ul className="treatmentList">
+              <p className="intro">The kinds of treatment I offer include:</p>
               <li>
-                • Relaxing and holistic massage, which uses lighter strokes,
-                aromatherapy essential oils and tends to be a full body massage
+                <div className="massageType">
+                  <h3>Relaxing and holistic massage</h3>
+                </div>
+                which uses lighter strokes, aromatherapy essential oils and
+                tends to be a full body massage
               </li>
               <li>
-                • Deep tissue massage, which tends to also be full body but
-                using slightly stronger pressure
+                <div className="massageType">
+                  <h3> Deep tissue massage</h3>
+                </div>
+                which tends to also be full body but using slightly stronger
+                pressure
               </li>
               <li>
-                • Pregnancy and post natal massage, tailored towards the needs
-                of pregnant people and new parents
+                <div className="massageType">
+                  <h3> Pregnancy and post natal massage</h3>
+                </div>
+                tailored towards the needs of pregnant people and new parents
               </li>
               <li>
-                • Sports and remedial massage which focuses on particular areas
-                of concern / injuries and often uses more active approaches,
-                longer consultation at the start and time for rehabilitation
-                advice and exercises at the end.
+                <div className="massageType">
+                  <h3> Sports and remedial massage </h3>
+                </div>
+                which focuses on particular areas of concern / injuries and
+                often uses more active approaches, longer consultation at the
+                start and time for rehabilitation advice and exercises at the
+                end.
               </li>
             </ul>
           </div>
@@ -77,6 +87,7 @@ export const Expect = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

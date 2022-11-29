@@ -1,6 +1,21 @@
-/* .expect-item:first-child {
-  margin-inline-end: 1rem;
-} */
+.treatmentList > li,
+.treatmentList > .intro {
+  margin-bottom: 3rem;
+}
+
+.massageType {
+  background-color: var(--orange);
+  font-size: 1.6rem;
+  color: var(--blue);
+  transform: skewY(-2deg);
+  width: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.massageType > h3 {
+  margin-bottom: 1rem;
+  padding: 5px 5px;
+}
 
 @media (max-width: 768px) {
   .expect-item {

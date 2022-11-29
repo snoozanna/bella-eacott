@@ -1,9 +1,10 @@
-import { forwardRef, useContext, useEffect, useRef } from "react";
-import useIsVisible from "../../hooks/useIsVisible.js";
+import { useState, useContext } from "react";
 import { MenuContext } from "./../../contexts/menu.context";
-
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+
+import Header from "./../../components/Structure/Header/Header.js";
+import Footer from "./../../components/Structure/Footer/Footer.js";
+
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
 import "../../components/Structure/Main/Main.js";
@@ -84,6 +85,7 @@ export const Contact = ({ initialValues }) => {
 
   return (
     <>
+      <Header />
       <main>
         <section className="contact content skinny">
           <h2 className="pageNameMobile">Contact me</h2>
@@ -163,6 +165,7 @@ export const Contact = ({ initialValues }) => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

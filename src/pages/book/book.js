@@ -1,6 +1,9 @@
 import { forwardRef, useContext, useEffect, useRef } from "react";
 import useIsVisible from "../../hooks/useIsVisible.js";
 import { MenuContext } from "./../../contexts/menu.context";
+
+import Header from "./../../components/Structure/Header/Header.js";
+import Footer from "./../../components/Structure/Footer/Footer.js";
 import "../../components/Structure/Main/Main.js";
 import "./book.css";
 
@@ -18,6 +21,7 @@ const Book = (props, ref) => {
 
   return (
     <>
+      <Header />
       <main>
         <section className="book content">
           <h2 className="pageNameMobile">Book me</h2>
@@ -49,6 +53,7 @@ const Book = (props, ref) => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

@@ -2,6 +2,8 @@ import { useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import useIsVisible from "../../hooks/useIsVisible.js";
 import { MenuContext } from "./../../contexts/menu.context";
+import Header from "./../../components/Structure/Header/Header.js";
+import Footer from "./../../components/Structure/Footer/Footer.js";
 import img from "./../../assets/img/Bella.JPG";
 import "./about.css";
 
@@ -20,9 +22,17 @@ const About = () => {
 
   return (
     <>
+      <Header />
       <main>
         <section className="about content skinny">
           <h2 className="pageNameMobile">About me</h2>
+          <div className="aboutImgContainer">
+            <img
+              src={img}
+              alt="Bella sitting in a chair, with her eyes closed, on a balcony facing the sun. In black and white."
+              className="bella "
+            />
+          </div>
           <div className="content-item">
             <p>
               I qualified as a massage therapist in 2018, beginning my studies
@@ -65,6 +75,7 @@ const About = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };
