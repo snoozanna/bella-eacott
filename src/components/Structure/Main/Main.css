@@ -103,7 +103,7 @@ section.skinny {
   section.home.content {
     justify-content: flex-end;
     display: flex;
-    margin-top: 15vh;
+    margin-top: inherit;
     margin-bottom: 5vh;
   }
 

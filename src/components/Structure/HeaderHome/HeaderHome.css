@@ -81,6 +81,10 @@ nav > ul {
     background-color: var(--pink);
   }
 
+  header.homeMob {
+    position: inherit;
+  }
+
   nav {
     max-width: 100%;
     font-size: 1.6rem;
@@ -125,6 +129,9 @@ nav > ul {
 
   #hamburger-button {
     padding: 0;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
   }
 
   ul.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {

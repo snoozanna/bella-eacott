@@ -62,7 +62,7 @@ const HeaderHome = () => {
     <>
       {matches ? (
         // MOBILE VERSION
-        <header>
+        <header class="homeMob">
           <div>
             <Button
               id="hamburger-button"
