@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import "../../components/Structure/Main/Main.js";
 import "./expect.css";
 
-export const Expect = ({ setHeaderStatus }) => {
+export const Expect = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("expect");
+    setPageStatus("expect");
   }, []);
 
   return (

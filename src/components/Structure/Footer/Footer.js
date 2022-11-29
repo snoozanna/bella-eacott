@@ -6,7 +6,7 @@ import insta from "./../../../assets/img/instablue.png";
 import acuity from "./../../../assets/img/acuityBlueCircle.png";
 
 import "./Footer.css";
-export default function Footer() {
+const Footer = ({ pageStatus }) => {
   const matches = useMediaQuery("(max-width:768px)");
   const wave = useSpring({
     to: { rotateZ: 7, transformOrigin: "bottom" },
@@ -20,21 +20,74 @@ export default function Footer() {
     delay: 500,
     loop: { reverse: true },
   });
-  return (
-    <>
-      {matches ? (
-        // MOBILE VERSION
-        <>
-          <footer>
+
+  if (pageStatus === "landing") {
+    return null;
+  } else if (pageStatus === "home") {
+    return null;
+  } else {
+    return (
+      <>
+        {matches ? (
+          // MOBILE VERSION
+          <>
+            <footer>
+              <div className="footer-item">
+                <div className="footer-wrapper">
+                  <span>
+                    <a
+                      href="https://www.instagram.com/bellaeacott/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={insta}
+                        alt="instagram logo "
+                        className="social"
+                      />
+                    </a>
+                  </span>
+                  <span>
+                    <img
+                      src={acuity}
+                      alt="instagram logo "
+                      className="social"
+                    />
+                    <a
+                      href="https://bellaeacottmassage.as.me/schedule.php"
+                      target="_blank"
+                      rel="noreferrer"
+                      // class="highlighted"
+                    >
+                      Book a massage
+                    </a>
+                  </span>
+                </div>
+              </div>
+
+              <div className="footer-item logo">
+                <animated.img
+                  style={wave}
+                  src={logo}
+                  alt="logo"
+                  className="logo"
+                />
+              </div>
+            </footer>
+          </>
+        ) : (
+          // DESKTOP VERSION
+          <>
             <div className="footer-item">
               <div className="footer-wrapper">
                 <span>
+                  <img src={insta} alt="instagram logo " className="social" />
                   <a
                     href="https://www.instagram.com/bellaeacott/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={insta} alt="instagram logo " className="social" />
+                    @bellaeacott
                   </a>
                 </span>
                 <span>
@@ -59,42 +112,11 @@ export default function Footer() {
                 className="logo"
               />
             </div>
-          </footer>
-        </>
-      ) : (
-        // DESKTOP VERSION
-        <>
-          <div className="footer-item">
-            <div className="footer-wrapper">
-              <span>
-                <img src={insta} alt="instagram logo " className="social" />
-                <a
-                  href="https://www.instagram.com/bellaeacott/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  @bellaeacott
-                </a>
-              </span>
-              <span>
-                <img src={acuity} alt="instagram logo " className="social" />
-                <a
-                  href="https://bellaeacottmassage.as.me/schedule.php"
-                  target="_blank"
-                  rel="noreferrer"
-                  // class="highlighted"
-                >
-                  Book a massage
-                </a>
-              </span>
-            </div>
-          </div>
+          </>
+        )}
+      </>
+    );
+  }
+};
 
-          <div className="footer-item logo">
-            <animated.img style={wave} src={logo} alt="logo" className="logo" />
-          </div>
-        </>
-      )}
-    </>
-  );
-}
+export default Footer;

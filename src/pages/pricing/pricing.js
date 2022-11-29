@@ -7,9 +7,9 @@ import green3 from "./../../assets/img/green3.png";
 import "../../components/Structure/Main/Main.js";
 import "./pricing.css";
 
-const Pricing = ({ setHeaderStatus }) => {
+const Pricing = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("pricing");
+    setPageStatus("pricing");
   }, []);
   return (
     <>

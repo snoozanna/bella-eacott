@@ -12,9 +12,9 @@ import img from "./../../assets/img/Bella.JPG";
 import "../../components/Structure/Main/Main.js";
 import "./home.css";
 
-export const Home = ({ setHeaderStatus }) => {
+export const Home = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("home");
+    setPageStatus("home");
   }, []);
 
   const matches = useMediaQuery("(max-width:768px)");

@@ -1,10 +1,10 @@
 import Header from "./../Header/Header";
 import HeaderHome from "./../HeaderHome/HeaderHome";
 
-const HeaderWrapper = ({ headerStatus }) => {
-  if (headerStatus === "landing") {
+const HeaderWrapper = ({ pageStatus }) => {
+  if (pageStatus === "landing") {
     return null;
-  } else if (headerStatus === "home") {
+  } else if (pageStatus === "home") {
     return <HeaderHome />;
   } else {
     return <Header />;

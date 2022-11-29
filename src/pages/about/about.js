@@ -6,9 +6,9 @@ import Footer from "./../../components/Structure/Footer/Footer.js";
 import img from "./../../assets/img/Bella.JPG";
 import "./about.css";
 
-const About = ({ setHeaderStatus }) => {
+const About = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("about");
+    setPageStatus("about");
   }, []);
 
   return (

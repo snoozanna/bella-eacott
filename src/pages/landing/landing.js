@@ -8,9 +8,9 @@ import insta from "./../../assets/img/insta.png";
 
 // import { Link } from "react-router-dom";
 
-const Landing = ({ setHeaderStatus }) => {
+const Landing = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("landing");
+    setPageStatus("landing");
   }, []);
 
   const anim1 = useSpring({

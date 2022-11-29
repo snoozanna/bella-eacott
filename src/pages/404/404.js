@@ -2,9 +2,9 @@ import { useEffect } from "react";
 
 import logo from "./../../assets/img/hand-face.png";
 
-function NotFound({ setHeaderStatus }) {
+function NotFound({ setPageStatus }) {
   useEffect(() => {
-    setHeaderStatus("pricing");
+    setPageStatus("pricing");
   }, []);
   return (
     <>

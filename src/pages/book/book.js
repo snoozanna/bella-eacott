@@ -4,9 +4,9 @@ import useIsVisible from "../../hooks/useIsVisible.js";
 import "../../components/Structure/Main/Main.js";
 import "./book.css";
 
-const Book = ({ setHeaderStatus }) => {
+const Book = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("book");
+    setPageStatus("book");
   }, []);
 
   return (

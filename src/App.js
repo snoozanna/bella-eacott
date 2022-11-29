@@ -25,47 +25,48 @@ import "./App.css";
 import "./styles/generics.css";
 
 function App() {
-  const [headerStatus, setHeaderStatus] = useState("landing");
+  const [pageStatus, setPageStatus] = useState("landing");
 
   return (
     <HelmetProvider>
       <MenuProvider>
         <Router>
-          <HeaderWrapper headerStatus={headerStatus} />
+          <HeaderWrapper pageStatus={pageStatus} />
           {/* {window.location.pathname !== "/landing" ? <Header /> : null}
           if its /landing render null, if its "/" render <HeaderHome/>, if its nything else render <Header/> */}
           <Routes>
             <Route
               path="/landing"
-              element={<Landing setHeaderStatus={setHeaderStatus} />}
+              element={<Landing setPageStatus={setPageStatus} />}
             />
-            <Route index element={<Home setHeaderStatus={setHeaderStatus} />} />
+            <Route index element={<Home setPageStatus={setPageStatus} />} />
             <Route
               path="/book"
-              element={<Book setHeaderStatus={setHeaderStatus} />}
+              element={<Book setPageStatus={setPageStatus} />}
             />
             <Route
               path="/contact"
-              element={<Contact setHeaderStatus={setHeaderStatus} />}
+              element={<Contact setPageStatus={setPageStatus} />}
             />
             <Route
               path="/about"
-              element={<About setHeaderStatus={setHeaderStatus} />}
+              element={<About setPageStatus={setPageStatus} />}
             />
             <Route
               path="/what-to-expect"
-              element={<Expect setHeaderStatus={setHeaderStatus} />}
+              element={<Expect setPageStatus={setPageStatus} />}
             />
             <Route
               path="/pricing"
-              element={<Pricing setHeaderStatus={setHeaderStatus} />}
+              element={<Pricing setPageStatus={setPageStatus} />}
             />
             <Route
               path="*"
-              element={<NotFound setHeaderStatus={setHeaderStatus} />}
+              element={<NotFound setPageStatus={setPageStatus} />}
             />
           </Routes>
         </Router>
+        <Footer pageStatus={pageStatus} />
         {/* {window.location.pathname !== "/landing" ? <Footer /> : null} */}
       </MenuProvider>
     </HelmetProvider>

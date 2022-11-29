@@ -19,9 +19,9 @@ import { Button } from "@material-ui/core";
 //   category: yup.mixed().oneOf(productCategories).required(),
 // });
 
-const Contact = ({ setHeaderStatus }) => {
+const Contact = ({ setPageStatus }) => {
   useEffect(() => {
-    setHeaderStatus("contact");
+    setPageStatus("contact");
   }, []);
   const [submitText, setSubmitText] = useState(null);
   const [buttonTxt, setButtonTxt] = useState("Send to Bella");
