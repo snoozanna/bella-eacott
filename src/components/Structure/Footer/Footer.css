@@ -13,7 +13,10 @@
 .footer-item.logo {
   display: flex;
 }
-.footer-item > img.logo {
+.footer-item.logo > a {
+  display: flex;
+}
+.footer-item > a > img.logo {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -65,7 +68,7 @@
     border-radius: 2px;
     transform: skewY(-2deg);
   }
-  .footer-item > img.logo {
+  .footer-item > a > img.logo {
     max-width: 80px;
   }
   .footer-wrapper > span > a > img.social {

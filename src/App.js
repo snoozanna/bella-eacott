@@ -65,9 +65,10 @@ function App() {
               element={<NotFound setPageStatus={setPageStatus} />}
             />
           </Routes>
+
+          <Footer pageStatus={pageStatus} />
+          {/* {window.location.pathname !== "/landing" ? <Footer /> : null} */}
         </Router>
-        <Footer pageStatus={pageStatus} />
-        {/* {window.location.pathname !== "/landing" ? <Footer /> : null} */}
       </MenuProvider>
     </HelmetProvider>
   );

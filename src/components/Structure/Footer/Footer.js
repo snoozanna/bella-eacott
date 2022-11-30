@@ -1,4 +1,5 @@
 import { useSpring, animated } from "react-spring";
+import { Link, NavLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 import logo from "./../../../assets/img/hand-face.png";
@@ -66,12 +67,14 @@ const Footer = ({ pageStatus }) => {
               </div>
 
               <div className="footer-item logo">
-                <animated.img
-                  style={wave}
-                  src={logo}
-                  alt="logo"
-                  className="logo"
-                />
+                <NavLink end to="/landing">
+                  <animated.img
+                    style={wave}
+                    src={logo}
+                    alt="logo"
+                    className="logo"
+                  />
+                </NavLink>
               </div>
             </footer>
           </>
@@ -105,12 +108,14 @@ const Footer = ({ pageStatus }) => {
             </div>
 
             <div className="footer-item logo">
-              <animated.img
-                style={wave}
-                src={logo}
-                alt="logo"
-                className="logo"
-              />
+              <NavLink end to="/landing">
+                <animated.img
+                  style={wave}
+                  src={logo}
+                  alt="logo"
+                  className="logo"
+                />
+              </NavLink>
             </div>
           </>
         )}
