@@ -81,7 +81,6 @@ const Pricing = ({ setPageStatus }) => {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 };

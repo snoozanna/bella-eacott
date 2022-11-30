@@ -23,7 +23,7 @@ const Footer = ({ pageStatus }) => {
 
   if (pageStatus === "landing") {
     return null;
-  } else if (pageStatus === "home") {
+  } else if (matches && pageStatus === "home") {
     return null;
   } else {
     return (
