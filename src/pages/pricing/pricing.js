@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
 import SEO from "./../../components/Structure/SEO/SEO.js";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -10,7 +11,11 @@ import "./pricing.css";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const Pricing = () => {
+const Pricing = ({ setPageStatus }) => {
+  useEffect(() => {
+    setPageStatus("pricing");
+  }, []);
+
   const matches = useMediaQuery("(max-width:768px)");
 
   // CAROUSEL - MOBILE

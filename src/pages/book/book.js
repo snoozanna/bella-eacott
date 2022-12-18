@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import SEO from "./../../components/Structure/SEO/SEO.js";
 import "../../components/Structure/Main/Main.js";
 import "./book.css";
 
-const Book = () => {
+const Book = ({ setPageStatus }) => {
+  useEffect(() => {
+    setPageStatus("book");
+  }, []);
   return (
     <>
       <SEO

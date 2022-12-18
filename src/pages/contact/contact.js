@@ -5,10 +5,14 @@ import { useForm } from "react-hook-form";
 import "../../components/Structure/Main/Main.js";
 import "./contact.css";
 
-const Contact = () => {
+const Contact = ({ setPageStatus }) => {
   const [submitText, setSubmitText] = useState(null);
   const [buttonTxt, setButtonTxt] = useState("Send to Bella");
   const [buttonDisabled, setButtonDisabled] = useState(false);
+
+  useEffect(() => {
+    setPageStatus("contact");
+  }, []);
 
   const onSubmit = async (event, setSubmitText) => {
     event.preventDefault();

@@ -3,7 +3,11 @@ import SEO from "./../../components/Structure/SEO/SEO.js";
 import "../../components/Structure/Main/Main.js";
 import "./expect.css";
 
-export const Expect = () => {
+export const Expect = ({ setPageStatus }) => {
+  useEffect(() => {
+    setPageStatus("expect");
+  }, []);
+
   return (
     <>
       <SEO

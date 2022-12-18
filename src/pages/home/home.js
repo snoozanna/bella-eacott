@@ -12,7 +12,11 @@ import img from "./../../assets/img/Bella.JPG";
 import "../../components/Structure/Main/Main.js";
 import "./home.css";
 
-export const Home = () => {
+export const Home = ({ setPageStatus }) => {
+  useEffect(() => {
+    setPageStatus("home");
+  }, []);
+
   const matches = useMediaQuery("(max-width:768px)");
   const turn = useSpring({
     to: { rotateZ: 0 },

@@ -115,6 +115,7 @@ h3.subtitle {
   section.home.content {
     justify-content: flex-end;
     display: flex;
+    margin-top: inherit;
     margin-bottom: 5vh;
   }
 

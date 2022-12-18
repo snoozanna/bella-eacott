@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SEO from "./../../components/Structure/SEO/SEO.js";
 import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
@@ -9,7 +10,10 @@ import "./about.css";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const About = () => {
+const About = ({ setPageStatus }) => {
+  useEffect(() => {
+    setPageStatus("about");
+  }, []);
   // CAROUSEL - MOBILE
   const items = [
     <Testimonial review="Bella’s massage was absolute bliss. I felt like I was floating afterwards. Exactly the right amount of pressure. This was the first time I’d had a massage at home and being able to get straight into bed afterwards was incredible. Highly recommend!" />,
