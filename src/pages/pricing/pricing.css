@@ -1,3 +1,5 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 /* .greenBottleWrapper {
   background-color: aliceblue;
   padding: 1rem;
@@ -12,7 +14,11 @@
 }
 
 .greenBottleContainer > .bottle {
-  max-width: 125px;
+  max-width: 200px;
+}
+
+img.bottle {
+  max-width: 200px;
 }
 
 .priviledge {
@@ -22,6 +28,8 @@
 .explanation {
   font-size: 1.2rem;
   line-height: 1.4rem;
+  max-width: 60%;
+  margin: auto;
 }
 
 .content-item.bottle > span {
@@ -37,9 +45,36 @@
 
 @media (max-width: 768px) {
   .greenBottleContainer {
+    display: block;
   }
 
-  .greenBottleContainer > .bottle {
-    max-width: 30%;
+  .carousel-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .alice-carousel {
+    width: 80vw;
+  }
+
+  .alice-carousel__next-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .alice-carousel__prev-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .explanation {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    max-width: 100%;
+    margin: auto;
+    margin-block-end: 3rem;
+  }
+  .scale.personal {
+    margin-block-end: 3rem;
   }
 }

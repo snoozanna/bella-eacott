@@ -1,16 +1,46 @@
 import { useEffect } from "react";
-import Header from "./../../components/Structure/Header/Header.js";
-import Footer from "./../../components/Structure/Footer/Footer.js";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import green1 from "./../../assets/img/green1.png";
 import green2 from "./../../assets/img/green2.png";
 import green3 from "./../../assets/img/green3.png";
 import "../../components/Structure/Main/Main.js";
 import "./pricing.css";
 
+const handleDragStart = (e) => e.preventDefault();
+
 const Pricing = ({ setPageStatus }) => {
   useEffect(() => {
     setPageStatus("pricing");
   }, []);
+  const matches = useMediaQuery("(max-width:768px)");
+
+  // CAROUSEL - MOBILE
+  const items = [
+    <img
+      src={green1}
+      onDragStart={handleDragStart}
+      alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
+      role="presentation"
+      className="bottle"
+    />,
+    <img
+      src={green2}
+      onDragStart={handleDragStart}
+      alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
+      role="presentation"
+      className="bottle"
+    />,
+    <img
+      src={green3}
+      onDragStart={handleDragStart}
+      alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
+      role="presentation"
+      className="bottle"
+    />,
+  ];
+
   return (
     <>
       <main>
@@ -23,10 +53,10 @@ const Pricing = ({ setPageStatus }) => {
             </p>
             <ul>
               <li className="massageType ">
-                <h3>60 minutes: £75</h3>
+                <h3>60 minutes: £70 in studio / £75 home visit</h3>
               </li>
               <li className="massageType ">
-                <h3>90 minutes: £90</h3>
+                <h3>90 minutes: £90 in studio / £95 home visit</h3>
               </li>
             </ul>
 
@@ -36,7 +66,7 @@ const Pricing = ({ setPageStatus }) => {
               though there will always be time to discuss that on the day too.{" "}
             </p>
 
-            <h3>Sliding scale payment options</h3>
+            <h3 className="subtitle">Sliding scale payment options</h3>
             <p>
               I think bodywork is brilliant and want it to be available for
               everyone, so if you are unable to pay the full price as listed
@@ -48,36 +78,64 @@ const Pricing = ({ setPageStatus }) => {
             </p>
           </div>
           <div className="content-item bottle">
-            <h3>THE GREEN BOTTLE</h3>
-            <span>Where you fall on the sliding scale</span>
-            {/* <div className="greenBottleWrapper"> */}
-            <div className="greenBottleContainer">
-              <div className="priviledge scale">Financial priviledge</div>
-              <img
-                src={green1}
-                alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
-                className="bottle"
-              />
-              <img
-                src={green2}
-                alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
-                className="bottle"
-              />
-              <img
-                src={green3}
-                alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
-                className="bottle"
-              />
-            </div>
-            <div className="scale"> Personal Financial Experience</div>
-            {/* </div> */}
+            <h3 className="subtitle">THE GREEN BOTTLE</h3>
 
-            <p className="explanation">
-              Basic needs include food, housing and transportation. Expendable
-              income might mean that you are able to buy a coffee or tea at a
-              shop, go to movies or a concert, or buy new clothes, books, and
-              similar items each month, etc.
-            </p>
+            {matches ? (
+              // MOBILE GREEN BOTTLE CAROUSEL
+              <>
+                <div className="greenBottleContainer">
+                  <div class="carousel-wrapper">
+                    <div className="priviledge scale">
+                      Financial priviledge -->{" "}
+                    </div>
+                    <AliceCarousel mouseTracking items={items} />
+                  </div>
+                  <div className="scale personal">
+                    {" "}
+                    Personal Financial Experience -->{" "}
+                  </div>
+                  <p className="explanation">
+                    Basic needs include food, housing and transportation.
+                    Expendable income might mean that you are able to buy a
+                    coffee or tea at a shop, go to movies or a concert, or buy
+                    new clothes, books, and similar items each month, etc.
+                  </p>
+                  <p>Diagram created by Alexis J Cunningfolk</p>
+                </div>
+              </>
+            ) : (
+              <>
+                {/* // DESKTOP GREEN BOTTLE IMAGE  */}
+                <div className="greenBottleContainer">
+                  <div className="priviledge scale">
+                    Financial priviledge -->{" "}
+                  </div>
+                  <img
+                    src={green1}
+                    alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
+                    className="bottle"
+                  />
+                  <img
+                    src={green2}
+                    alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
+                    className="bottle"
+                  />
+                  <img
+                    src={green3}
+                    alt="A diagram of the Green Bottle model for guidance on sliding scale payments, with the highest cost reflecting the true cost of the service and the lowest cost representing an acknowledgement that there are folks whose economic circumstances would prevent them from accessing the service if there was not a deliberate opportunity made for them, at a cost that is reflective of their economic realities."
+                    className="bottle"
+                  />
+                </div>
+                <div className="scale"> Personal Financial Experience --> </div>
+                <p className="explanation">
+                  Basic needs include food, housing and transportation.
+                  Expendable income might mean that you are able to buy a coffee
+                  or tea at a shop, go to movies or a concert, or buy new
+                  clothes, books, and similar items each month, etc.
+                </p>
+                <p>Diagram created by Alexis J Cunningfolk</p>
+              </>
+            )}
           </div>
         </section>
       </main>
