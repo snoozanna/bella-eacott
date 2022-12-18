@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import AliceCarousel from "react-alice-carousel";
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import "react-alice-carousel/lib/alice-carousel.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import green1 from "./../../assets/img/green1.png";
@@ -10,10 +10,7 @@ import "./pricing.css";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const Pricing = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("pricing");
-  }, []);
+const Pricing = () => {
   const matches = useMediaQuery("(max-width:768px)");
 
   // CAROUSEL - MOBILE
@@ -43,6 +40,13 @@ const Pricing = ({ setPageStatus }) => {
 
   return (
     <>
+      <SEO
+        title="Pricing"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="Pricing"
+        type="article"
+      />
       <main>
         <section className="pricing content skinny">
           <h2 className="pageNameMobile">Pricing</h2>

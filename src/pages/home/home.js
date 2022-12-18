@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { NavLink } from "react-router-dom";
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import HeaderHome from "./../../components/Structure/HeaderHome/HeaderHome.js";
-
 import logo from "./../../assets/img/bella-logo-bg.png";
 import text from "./../../assets/img/blue-words.png";
 import insta from "./../../assets/img/instablue.png";
@@ -12,11 +12,7 @@ import img from "./../../assets/img/Bella.JPG";
 import "../../components/Structure/Main/Main.js";
 import "./home.css";
 
-export const Home = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("home");
-  }, []);
-
+export const Home = () => {
   const matches = useMediaQuery("(max-width:768px)");
   const turn = useSpring({
     to: { rotateZ: 0 },
@@ -33,6 +29,13 @@ export const Home = ({ setPageStatus }) => {
 
   return (
     <>
+      <SEO
+        title="Bella Eacott Massage"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="Home"
+        type="article"
+      />
       {matches ? (
         // MOBILE VERSION
         <>
@@ -120,19 +123,6 @@ export const Home = ({ setPageStatus }) => {
               </div>
             </section>
           </main>
-          <span>
-            <a
-              href="https://www.instagram.com/bellaeacott/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={insta}
-                alt="instagram logo home"
-                className="social logo home"
-              />
-            </a>
-          </span>
         </>
       ) : (
         // DESKTOP VERSION

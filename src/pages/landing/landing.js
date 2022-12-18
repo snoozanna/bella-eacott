@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { NavLink } from "react-router-dom";
 import SEO from "./../../components/Structure/SEO/SEO.js";
@@ -8,11 +7,7 @@ import insta from "./../../assets/img/insta.png";
 
 // import { Link } from "react-router-dom";
 
-const Landing = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("landing");
-  }, []);
-
+const Landing = () => {
   const anim1 = useSpring({
     to: { scale: 1.1 },
     from: { scale: 1 },

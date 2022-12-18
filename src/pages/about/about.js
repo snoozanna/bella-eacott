@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 
@@ -9,11 +9,7 @@ import "./about.css";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const About = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("about");
-  }, []);
-
+const About = () => {
   // CAROUSEL - MOBILE
   const items = [
     <Testimonial review="Bella’s massage was absolute bliss. I felt like I was floating afterwards. Exactly the right amount of pressure. This was the first time I’d had a massage at home and being able to get straight into bed afterwards was incredible. Highly recommend!" />,
@@ -37,6 +33,13 @@ const About = ({ setPageStatus }) => {
 
   return (
     <>
+      <SEO
+        title="About me"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="About me"
+        type="article"
+      />
       <main>
         <section className="about content skinny">
           <h2 className="pageNameMobile">About me</h2>
@@ -95,6 +98,7 @@ const About = ({ setPageStatus }) => {
               mouseTracking
               items={items}
               responsive={options.responsive}
+              disableButtonsControls={true}
             />
             {/* <Testimonial review="Bella’s massage was absolute bliss. I felt like I was floating afterwards. Exactly the right amount of pressure. This was the first time I’d had a massage at home and being able to get straight into bed afterwards was incredible. Highly recommend!" />
             <Testimonial review="Bella is great - she sorted my long term shoulder injury in one session and provided great follow up for progressive rehabilitation and home mobility guidance. I now have regular deep tissue sessions to keep my overall muscular health at peak. Highly recommended!" />

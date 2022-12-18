@@ -1,16 +1,17 @@
-import { useEffect } from "react";
-import useIsVisible from "../../hooks/useIsVisible.js";
-
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import "../../components/Structure/Main/Main.js";
 import "./book.css";
 
-const Book = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("book");
-  }, []);
-
+const Book = () => {
   return (
     <>
+      <SEO
+        title="Book me"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="Book me"
+        type="article"
+      />
       <main>
         <section className="book content">
           <h2 className="pageNameMobile">Book me</h2>

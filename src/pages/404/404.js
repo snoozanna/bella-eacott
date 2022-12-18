@@ -2,10 +2,7 @@ import { useEffect } from "react";
 
 import logo from "./../../assets/img/hand-face.png";
 
-function NotFound({ setPageStatus }) {
-  useEffect(() => {
-    setPageStatus("pricing");
-  }, []);
+function NotFound() {
   return (
     <>
       <img src={logo} alt="logo" />

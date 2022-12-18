@@ -25,48 +25,25 @@ import "./App.css";
 import "./styles/generics.css";
 
 function App() {
-  const [pageStatus, setPageStatus] = useState("landing");
-
   return (
     <HelmetProvider>
       <MenuProvider>
         <Router>
-          <HeaderWrapper pageStatus={pageStatus} />
+          <HeaderWrapper />
           {/* {window.location.pathname !== "/landing" ? <Header /> : null}
           if its /landing render null, if its "/" render <HeaderHome/>, if its nything else render <Header/> */}
           <Routes>
-            <Route
-              path="/landing"
-              element={<Landing setPageStatus={setPageStatus} />}
-            />
-            <Route index element={<Home setPageStatus={setPageStatus} />} />
-            <Route
-              path="/book"
-              element={<Book setPageStatus={setPageStatus} />}
-            />
-            <Route
-              path="/contact"
-              element={<Contact setPageStatus={setPageStatus} />}
-            />
-            <Route
-              path="/about"
-              element={<About setPageStatus={setPageStatus} />}
-            />
-            <Route
-              path="/what-to-expect"
-              element={<Expect setPageStatus={setPageStatus} />}
-            />
-            <Route
-              path="/pricing"
-              element={<Pricing setPageStatus={setPageStatus} />}
-            />
-            <Route
-              path="*"
-              element={<NotFound setPageStatus={setPageStatus} />}
-            />
+            <Route path="/landing" element={<Landing />} />
+            <Route index element={<Home />} />
+            <Route path="/book" element={<Book />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/what-to-expect" element={<Expect />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
 
-          <Footer pageStatus={pageStatus} />
+          <Footer />
           {/* {window.location.pathname !== "/landing" ? <Footer /> : null} */}
         </Router>
       </MenuProvider>

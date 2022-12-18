@@ -1,14 +1,18 @@
 import { useEffect } from "react";
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import "../../components/Structure/Main/Main.js";
 import "./expect.css";
 
-export const Expect = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("expect");
-  }, []);
-
+export const Expect = () => {
   return (
     <>
+      <SEO
+        title="What to expect"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="What to expect"
+        type="article"
+      />
       <main>
         <section className="expect content skinny">
           <h2 className="pageNameMobile">Treatments & What to Expect</h2>

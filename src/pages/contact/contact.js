@@ -1,47 +1,14 @@
 import { useState, useEffect } from "react";
-import { MenuContext } from "./../../contexts/menu.context";
+import SEO from "./../../components/Structure/SEO/SEO.js";
 import { useForm } from "react-hook-form";
 
-import Header from "./../../components/Structure/Header/Header.js";
-import Footer from "./../../components/Structure/Footer/Footer.js";
-
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
 import "../../components/Structure/Main/Main.js";
 import "./contact.css";
 
-import { Button } from "@material-ui/core";
-
-// const schema = yup.object().shape({
-//   name: yup.string().required().min(2).max(20),
-//   // email: yup.string().required().min(2).max(20),
-//   subject: yup.string().required().min(2).max(5),
-//   category: yup.mixed().oneOf(productCategories).required(),
-// });
-
-const Contact = ({ setPageStatus }) => {
-  useEffect(() => {
-    setPageStatus("contact");
-  }, []);
+const Contact = () => {
   const [submitText, setSubmitText] = useState(null);
   const [buttonTxt, setButtonTxt] = useState("Send to Bella");
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  // console.log("ref in contact", ref);
-  // const { contactRef } = ref.current;
-  // const isInViewport = useIsVisible(contactRef);
-
-  // useEffect(() => {
-  //   if (isInViewport === true) {
-  //     console.log("we're looking at contact ");
-  //     changePage(5);
-  //   }
-  // }, [isInViewport]);
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   reset,
-  //   formState: { errors },
-  // } = useForm({ mode: "onBlur" });
 
   const onSubmit = async (event, setSubmitText) => {
     event.preventDefault();
@@ -87,6 +54,13 @@ const Contact = ({ setPageStatus }) => {
 
   return (
     <>
+      <SEO
+        title="Contact"
+        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
+          London"
+        name="Contact"
+        type="article"
+      />
       <main>
         <section className="contact content skinny">
           <h2 className="pageNameMobile">Contact me</h2>
