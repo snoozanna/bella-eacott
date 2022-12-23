@@ -52,15 +52,11 @@ const Landing = ({ setPageStatus }) => {
         name="Bella Eacott Massage"
         type="article"
       />
-      {/* <header className="holding">
+      <header className="landing">
         <h1>
-          Bella Eacott <span className="massage">Massage</span>{" "}
-        </h1>{" "}
-        <p className="description">
-          Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London.
-        </p>
-      </header> */}
+          Bella Eacott <span className="massage">Massage</span>
+        </h1>
+      </header>
 
       <div className="landingWrapper">
         <div className="hero">
