@@ -64,7 +64,7 @@ const Landing = ({ setPageStatus }) => {
 
       <div className="landingWrapper">
         <div className="hero">
-          <NavLink to="/">
+          <NavLink to="/home">
             <div className="taglineWrapper">
               <animated.span style={anim1} className="tagline">
                 LET'S
@@ -77,7 +77,7 @@ const Landing = ({ setPageStatus }) => {
               </animated.span>
             </div>
           </NavLink>
-          <NavLink to="/" className="navFace">
+          <NavLink to="/home" className="navFace">
             <animated.img
               className="face"
               src={face}

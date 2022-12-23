@@ -67,7 +67,7 @@ const Footer = ({ pageStatus }) => {
               </div>
 
               <div className="footer-item logo">
-                <NavLink end to="/landing">
+                <NavLink end to="/">
                   <animated.img
                     style={wave}
                     src={logo}
@@ -108,7 +108,7 @@ const Footer = ({ pageStatus }) => {
             </div>
 
             <div className="footer-item logo">
-              <NavLink end to="/landing">
+              <NavLink end to="/">
                 <animated.img
                   style={wave}
                   src={logo}

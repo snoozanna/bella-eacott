@@ -100,7 +100,7 @@ const HeaderHome = () => {
               <MenuItem sx={menuItemStyles}>
                 <NavLink
                   end
-                  to="/"
+                  to="/home"
                   style={({ isActive }) => ({
                     color: isActive ? "var(--yellow)" : "var(--pink)",
                   })}
@@ -181,7 +181,7 @@ const HeaderHome = () => {
                 <li>
                   <NavLink
                     end
-                    to="/"
+                    to="/home"
                     style={({ isActive }) => ({
                       color: isActive ? "var(--yellow)" : "var(--blue)",
                       fontSize: isActive ? "3rem" : "inherit",
@@ -248,21 +248,23 @@ const HeaderHome = () => {
               </ul>
             </nav>
           </header>
-          <div className="logoWrapper home">
-            <img
-              style={turn}
-              src={logoInner}
-              alt="Bella Eacott Massage"
-              className="logo mob inner "
-            />{" "}
-            {/* <animated.img */}
-            <img
-              style={turn}
-              src={text}
-              alt="I deserve to feel nice... You deserve to feel nice... We deserve to feel nice..."
-              className="logo mob text "
-            />
-          </div>
+          <Link to="/home" className="highlighted">
+            <div className="logoWrapper home">
+              <img
+                style={turn}
+                src={logoInner}
+                alt="Bella Eacott Massage"
+                className="logo mob inner "
+              />{" "}
+              <animated.img
+                // <img
+                style={turn}
+                src={text}
+                alt="I deserve to feel nice... You deserve to feel nice... We deserve to feel nice..."
+                className="logo mob text "
+              />
+            </div>
+          </Link>
         </>
       )}
     </>

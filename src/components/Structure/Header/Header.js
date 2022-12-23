@@ -1,11 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "./../../../assets/img/bella-logo-bg.png";
+
 import facesolo from "./../../../assets/img/faceSolo.png";
 import logoInner from "./../../../assets/img/logo-no-text.png";
 import text from "./../../../assets/img/blue-words.png";
@@ -87,7 +87,7 @@ const Header = () => {
               <MenuItem sx={menuItemStyles}>
                 <NavLink
                   end
-                  to="/"
+                  to="/home"
                   style={({ isActive }) => ({
                     color: isActive ? "var(--yellow)" : "var(--pink)",
                   })}
@@ -165,7 +165,7 @@ const Header = () => {
                 <li>
                   <NavLink
                     end
-                    to="/"
+                    to="/home"
                     style={({ isActive }) => ({
                       color: isActive ? "var(--yellow)" : "var(--blue)",
                       fontSize: isActive ? "3rem" : "inherit",
@@ -232,20 +232,22 @@ const Header = () => {
               </ul>
             </nav>
           </header>
-          <div className="logoWrapper">
-            <img
-              style={turn}
-              src={logoInner}
-              alt="Bella Eacott Massage"
-              className={`logo mob inner`}
-            />{" "}
-            <animated.img
-              style={turn}
-              src={text}
-              alt="I deserve to feel nice... You deserve to feel nice... We deserve to feel nice..."
-              className={`logo mob text`}
-            />
-          </div>
+          <Link to="/home" className="highlighted">
+            <div className="logoWrapper">
+              <img
+                style={turn}
+                src={logoInner}
+                alt="Bella Eacott Massage"
+                className={`logo mob inner`}
+              />{" "}
+              <animated.img
+                style={turn}
+                src={text}
+                alt="I deserve to feel nice... You deserve to feel nice... We deserve to feel nice..."
+                className={`logo mob text`}
+              />
+            </div>
+          </Link>
         </>
       )}
     </>

@@ -30,10 +30,13 @@ function App() {
               <HeaderWrapper pageStatus={pageStatus} />
               <Routes>
                 <Route
-                  path="/landing"
+                  index
                   element={<Landing setPageStatus={setPageStatus} />}
                 />
-                <Route index element={<Home setPageStatus={setPageStatus} />} />
+                <Route
+                  path="/home"
+                  element={<Home setPageStatus={setPageStatus} />}
+                />
                 <Route
                   path="/book"
                   element={<Book setPageStatus={setPageStatus} />}
