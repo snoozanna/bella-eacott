@@ -1,11 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useSpring, animated } from "react-spring";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "./../../../assets/img/bella-logo-bg.png";
 import facesolo from "./../../../assets/img/faceSolo.png";
+import logoInner from "./../../../assets/img/logo-no-text.png";
+import text from "./../../../assets/img/blue-words.png";
 import "./Header.css";
 
 const Header = () => {
@@ -13,18 +16,6 @@ const Header = () => {
   const [small, setSmall] = useState(false);
   const matches = useMediaQuery("(max-width:768px)");
   const open = Boolean(anchorEl);
-
-  //TODO FIX THIS
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        setSmall(window.pageYOffset > 200);
-        // console.log("small logo required");
-      });
-    } else {
-      console.log("issue with window", window);
-    }
-  }, []);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -34,17 +25,22 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-  // useEffect(() => {
-  //   ref.current.scrollTo(currentPage);
-  // }, [currentPage, ref]);
-
-  // const handleToggle = (newPage) => {
-  //   changePage(newPage);
-  // };
-
   const handleToggle = (ref) => {
     setAnchorEl(null);
   };
+
+  const turn = useSpring({
+    to: { rotateZ: 0 },
+    from: { rotateZ: 360 },
+    config: {
+      duration: 100000,
+      mass: 1,
+      tension: 180,
+      friction: 12,
+    },
+    delay: 500,
+    loop: true,
+  });
 
   const menuItemStyles = {
     backgroundColor: "var(--blue)",
@@ -189,7 +185,7 @@ const Header = () => {
                     About me
                   </NavLink>
                 </li>
-                <li>
+                <li className="bump">
                   <NavLink
                     to="/what-to-expect"
                     style={({ isActive }) => ({
@@ -238,10 +234,16 @@ const Header = () => {
           </header>
           <div className="logoWrapper">
             <img
-              src={logo}
-              alt="logo"
-              className="logo "
-              onClick={() => handleToggle(0)}
+              style={turn}
+              src={logoInner}
+              alt="Bella Eacott Massage"
+              className={`logo mob inner`}
+            />{" "}
+            <animated.img
+              style={turn}
+              src={text}
+              alt="I deserve to feel nice... You deserve to feel nice... We deserve to feel nice..."
+              className={`logo mob text`}
             />
           </div>
         </>

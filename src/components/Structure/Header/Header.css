@@ -16,12 +16,20 @@ header {
   position: fixed;
   top: 2rem;
   left: 2rem;
-  width: 25%;
-  max-width: 400px;
   flex-grow: 1;
   margin: auto;
   z-index: 99999;
+  width: 25%;
 }
+
+/* If scrolled below 200px, make logo smaller  */
+/* .logoWrapper > img.logo.small {
+  width: 20%;
+} */
+
+/* .logoWrapper > img.logo.large {
+  width: 30%;
+} */
 
 nav {
   display: flex;
@@ -146,5 +154,36 @@ nav > ul {
   .treatments {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* TABLET STYLES  */
+@media (min-width: 768px) and (max-width: 992px) {
+  .logoWrapper > img.logo {
+    max-width: 30vw;
+  }
+
+  header > nav {
+    width: 50vw;
+  }
+
+  nav > .nav-item {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav-item > li {
+    justify-content: flex-end;
+    text-align: right;
+    width: fit-content;
+  }
+
+  .nav-item > li.bump {
+    width: 50%;
+  }
+
+  .bump {
+    order: 10;
   }
 }

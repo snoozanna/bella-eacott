@@ -1,72 +1,6 @@
-header {
-  padding: 0 2rem;
-  width: 100%;
-  max-width: 100%;
-  background-color: var(--pink);
-  font-size: 2rem;
-  z-index: 9999;
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.logoWrapper > img.logo {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
+.logoWrapper.home > img.logo {
   width: 100%;
   max-width: 400px;
-  flex-grow: 1;
-  margin: auto;
-  z-index: 99999;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-  max-width: 70%;
-  align-items: flex-start;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-top: 2rem;
-  color: var(--blue);
-  text-transform: uppercase;
-  font-size: 2rem;
-}
-
-nav > ul {
-  margin-block-end: 0;
-  /* margin-top: 0; */
-}
-
-.nav-item {
-  display: flex;
-  /* width: 30%; */
-}
-
-.nav-item > li {
-  width: 33%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-inline-end: 2rem;
-  font-family: var(--font-bold);
-  cursor: pointer;
-}
-
-.nav-item > li:hover {
-  color: var(--yellow);
-}
-
-/* .current {
-  color: var(--yellow);
-  font-size: 3rem;
-} */
-
-.facesolo {
-  display: none;
 }
 
 @media (max-width: 768px) {
@@ -162,5 +96,11 @@ nav > ul {
   }
   header > .description > p {
     margin-bottom: 0;
+  }
+}
+/* TABLET STYLES  */
+@media (min-width: 768px) and (max-width: 992px) {
+  .logoWrapper.home > img.logo {
+    max-width: 45vw;
   }
 }

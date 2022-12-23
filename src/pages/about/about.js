@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import SEO from "./../../components/Structure/SEO/SEO.js";
 import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
-
+import usePageTracking from "./../../hooks/usePageTracking";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Testimonial from "../../components/Testimonial/Testimonial.js";
 import img from "./../../assets/img/Bella.JPG";
@@ -11,6 +11,7 @@ import "./about.css";
 const handleDragStart = (e) => e.preventDefault();
 
 const About = ({ setPageStatus }) => {
+  usePageTracking();
   useEffect(() => {
     setPageStatus("about");
   }, []);
@@ -23,16 +24,10 @@ const About = ({ setPageStatus }) => {
     <Testimonial review="Bella is diligent and knowledgeable and I’ve felt in such safe hands every time she’s worked with me. She takes great care in making you feel understood and every time I’ve felt more comfortable in my body. I couldn’t recommend her more!" />,
   ];
 
-  var options = {
-    responsive: {
-      0: {
-        items: 1,
-      },
-      1024: {
-        items: 3,
-        // itemsFit: "contain",
-      },
-    },
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 3 },
   };
 
   return (
@@ -101,7 +96,7 @@ const About = ({ setPageStatus }) => {
             <AliceCarousel
               mouseTracking
               items={items}
-              responsive={options.responsive}
+              responsive={responsive}
               disableButtonsControls={true}
             />
             {/* <Testimonial review="Bella’s massage was absolute bliss. I felt like I was floating afterwards. Exactly the right amount of pressure. This was the first time I’d had a massage at home and being able to get straight into bed afterwards was incredible. Highly recommend!" />

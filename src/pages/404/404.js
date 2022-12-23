@@ -8,8 +8,9 @@ function NotFound({ setPageStatus }) {
   }, []);
   return (
     <>
-      <img src={logo} alt="logo" />
-      <h1>404 Not Found</h1>
+      <section className="content">
+        <h1>Sorry... that page doesn't exist</h1>
+      </section>
     </>
   );
 }

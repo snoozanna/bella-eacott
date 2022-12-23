@@ -3,20 +3,21 @@ import { useSpring, animated } from "react-spring";
 import { NavLink } from "react-router-dom";
 import SEO from "./../../components/Structure/SEO/SEO.js";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import HeaderHome from "./../../components/Structure/HeaderHome/HeaderHome.js";
-import logo from "./../../assets/img/bella-logo-bg.png";
+import usePageTracking from "./../../hooks/usePageTracking";
 import text from "./../../assets/img/blue-words.png";
-import insta from "./../../assets/img/instablue.png";
+
 import logoInner from "./../../assets/img/logo-no-text.png";
 import img from "./../../assets/img/Bella.JPG";
 import "../../components/Structure/Main/Main.js";
 import "./home.css";
 
 export const Home = ({ setPageStatus }) => {
+  usePageTracking();
   useEffect(() => {
     setPageStatus("home");
   }, []);
 
+  // Phone and tablet
   const matches = useMediaQuery("(max-width:768px)");
   const turn = useSpring({
     to: { rotateZ: 0 },
@@ -49,13 +50,13 @@ export const Home = ({ setPageStatus }) => {
                 <img
                   style={turn}
                   src={logoInner}
-                  alt="logo"
+                  alt="Bella Eacott Massage"
                   className="logo mob inner"
                 />{" "}
                 <animated.img
                   style={turn}
                   src={text}
-                  alt="logo"
+                  alt="I deserve to feel nice... You deserve to feel nice... We deserve to feel nice..."
                   className="logo mob text "
                 />
               </div>
