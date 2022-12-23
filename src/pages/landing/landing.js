@@ -53,9 +53,11 @@ const Landing = ({ setPageStatus }) => {
         type="article"
       />
       <header className="landing">
-        <h1>
-          Bella Eacott <span className="massage">Massage</span>
-        </h1>
+        <NavLink to="/home">
+          <h1 className="title">
+            Bella Eacott <span className="massage">Massage</span>
+          </h1>
+        </NavLink>
       </header>
 
       <div className="landingWrapper">

@@ -60,8 +60,9 @@ a:hover {
 }
 
 @media (max-width: 800px) {
-  header > h1 {
+  header.landing > a > h1.title {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 }
