@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import SEO from "./../../components/Structure/SEO/SEO.js";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 import usePageTracking from "./../../hooks/usePageTracking";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -54,14 +54,10 @@ const About = ({ setPageStatus }) => {
               I qualified as a massage therapist in 2018, beginning my studies
               in osteopathy the same year. I am trained to provide sports and
               remedial massage, deep tissue as well as relaxing and holistic
-              styles of{" "}
-              <button
-                className="withinText highlighted"
-                // onClick={() => ref.current.scrollTo(changePage(2))}/
-              >
-                {" "}
+              styles of {""}
+              <NavLink to="/what-to-expect" className="highlighted">
                 treatment
-              </button>
+              </NavLink>
               .
             </p>
           </div>
