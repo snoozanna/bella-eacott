@@ -11,10 +11,10 @@ export const Expect = ({ setPageStatus }) => {
   return (
     <>
       <SEO
-        title="What to expect"
+        title="Treatments & What to expect"
         description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
           London"
-        name="What to expect"
+        name="Treatments & What to expect"
         type="article"
       />
       <main>
@@ -57,6 +57,15 @@ export const Expect = ({ setPageStatus }) => {
                 often uses more active approaches, longer consultation at the
                 start and time for rehabilitation advice and exercises at the
                 end.
+              </li>
+              <li>
+                <div className="massageType">
+                  <h3>Facial Massage</h3>
+                </div>
+                A soothing and relaxing massage for your face, head and neck,
+                easing headaches and jaw pain, increasing blood and lymphatic
+                circulation, plumping the skin, smoothing fine lines and
+                wrinkles.
               </li>
             </ul>
           </div>
