@@ -30,9 +30,24 @@ const Book = ({ setPageStatus }) => {
             >
               studio.pinacle
             </a>{" "}
-            in Peckham, and also do home visits across most parts of London.
+            in Peckham, and also do home visits across most parts of London;
+            these appointments can be booked directly using my booking system
+            below.{" "}
           </p>
-          <p className="content-item">You can book below:</p>
+          <p className="content-item">
+            {" "}
+            I also have appointments at Butterfield Osteopathy in Stoke
+            Newington twice a week, which you have to book directly through
+            their website:{" "}
+            <a
+              href=" www.butterfieldosteopathy.co.uk"
+              target="_blank"
+              rel="noreferrer"
+              className="highlighted"
+            >
+              www.butterfieldosteopathy.co.uk
+            </a>
+          </p>
           <div className="bookingWidget content-item">
             <iframe
               src="https://app.squarespacescheduling.com/schedule.php?owner=27159191"

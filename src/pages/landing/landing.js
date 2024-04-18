@@ -85,34 +85,6 @@ const Landing = ({ setPageStatus }) => {
           </NavLink>
         </div>
       </div>
-
-      {/* <div className="description"></div> */}
-
-      {/* <footer>
-        <div className="footerItem">
-          <img src={insta} alt="instagram logo " />
-          <a
-            href="https://www.instagram.com/bellaeacott/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            @bellaeacott
-          </a>
-        </div>
-        <div className="footerItem">
-          <span>
-            Book via{" "}
-            <a
-              href="https://bellaeacottmassage.as.me/schedule.php"
-              target="_blank"
-              rel="noreferrer"
-              className="highlighted"
-            >
-              Acuity
-            </a>
-          </span>
-        </div>
-      </footer> */}
     </>
   );
 };
