@@ -40,7 +40,7 @@ const Book = ({ setPageStatus }) => {
             Newington twice a week, which you have to book directly through
             their website:{" "}
             <a
-              href=" www.butterfieldosteopathy.co.uk"
+              href="https://www.butterfieldosteopathy.co.uk"
               target="_blank"
               rel="noreferrer"
               className="highlighted"
