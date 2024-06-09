@@ -62,10 +62,10 @@ const Pricing = ({ setPageStatus }) => {
             </p>
             <ul>
               <li className="massageType ">
-                <h3>60 minutes: £70 in studio / £75 home visit</h3>
+                <h3>60 minutes: £75 in studio / £85 home visit</h3>
               </li>
               <li className="massageType ">
-                <h3>90 minutes: £90 in studio / £95 home visit</h3>
+                <h3>90 minutes: £95 in studio / £105 home visit</h3>
               </li>
             </ul>
 
