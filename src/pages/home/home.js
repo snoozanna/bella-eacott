@@ -36,8 +36,7 @@ export const Home = ({ setPageStatus }) => {
     <>
       <SEO
         title="Bella Eacott Massage"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
+        description="Osteopathy & massage across London"
         name="Home"
         type="article"
       />
@@ -84,7 +83,6 @@ export const Home = ({ setPageStatus }) => {
                     })}
                   >
                     <div className="treatments">
-                      <span>Treatments & </span>
                       <span>What to Expect</span>
                     </div>
                   </NavLink>
@@ -140,8 +138,7 @@ export const Home = ({ setPageStatus }) => {
                 className="bella"
               />
               <div className="description">
-                Sports, deep tissue, relaxing, pregnancy and remedial massage
-                across London.
+              Osteopathy & massage across London
               </div>
             </section>
           </main>

@@ -113,7 +113,6 @@ const Header = () => {
                   })}
                 >
                   <div className="treatments">
-                    <span>Treatments & </span>
                     <span>What to Expect</span>
                   </div>
                 </NavLink>
@@ -193,7 +192,7 @@ const Header = () => {
                       fontSize: isActive ? "3rem" : "inherit",
                     })}
                   >
-                    Treatments & What to Expect
+                    What to Expect
                   </NavLink>
                 </li>
                 <li>

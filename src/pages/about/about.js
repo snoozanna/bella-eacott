@@ -34,8 +34,7 @@ const About = ({ setPageStatus }) => {
     <>
       <SEO
         title="About me"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
+        description="Osteopathy & massage across London"
         name="About me"
         type="article"
       />
@@ -51,28 +50,17 @@ const About = ({ setPageStatus }) => {
           </div>
           <div className="content-item">
             <p>
-              I qualified as a massage therapist in 2018, beginning my studies
-              in osteopathy the same year. I am trained to provide sports and
-              remedial massage, deep tissue as well as relaxing and holistic
-              styles of {""}
-              <NavLink to="/what-to-expect" className="highlighted">
-                treatment
-              </NavLink>
-              .
+            I am a Registered Osteopath (GOsC number 11802), qualifying with distinction from the University College of Osteopathy in 2024; and a massage therapist, experienced in providing sports, deep tissue, holistic, pre and post natal, facial and lymphatic drainage styles of massage. 
             </p>
           </div>
           <div className="content-item">
             <p>
-              I have always been interested in body and movement, with a
-              background in dance and then studying history and philosophy of
-              medicine at university. I worked for many years on a research and
-              training initiative providing arts-based wellbeing programmes for
-              healthcare professionals, and in this role thought especially
-              about the importance of touch, communication and embodied
-              experiences in how we understand our bodies, health and illness. I
-              continue to be interested and involved in research around these
-              topics, which influence the ways that I approach my practice. I am
-              a member of the{" "}
+            I have always been interested in the body and movement, with a background in dance and then studying history and philosophy of medicine at university. I worked for many years on a research and training initiative providing arts-based wellbeing programmes for healthcare professionals, and in this role thought especially about the importance of touch, communication and embodied experiences in how we understand ourselves in health and illness. I continue to be interested and involved in research around these topics, which influence the ways that I approach my practice. 
+            </p>
+          </div>
+          <div className="content-item">
+            <p>
+            I am fully insured, registered with the General Osteopathic Council (GOsC registration number 11802) and am a member of the{" "}
               <a
                 href="https://www.thesma.org/"
                 className="highlighted"
@@ -81,8 +69,7 @@ const About = ({ setPageStatus }) => {
               >
                 {" "}
                 Association for Soft Tissue Therapists
-              </a>{" "}
-              , and fully insured by Protectivity Insurance.
+              </a>.
             </p>
           </div>
         </section>

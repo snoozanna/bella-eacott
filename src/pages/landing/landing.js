@@ -47,15 +47,14 @@ const Landing = ({ setPageStatus }) => {
     <>
       <SEO
         title="Bella Eacott Massage"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
+        description="Osteopathy & massage across London"
         name="Bella Eacott Massage"
         type="article"
       />
       <header className="landing">
         <NavLink to="/home">
           <h1 className="title">
-            Bella Eacott <span className="massage">Massage</span>
+            Bella Eacott <span className="massage">Osteopathy & Massage</span>
           </h1>
         </NavLink>
       </header>

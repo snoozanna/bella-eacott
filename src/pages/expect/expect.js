@@ -11,87 +11,30 @@ export const Expect = ({ setPageStatus }) => {
   return (
     <>
       <SEO
-        title="Treatments & What to expect"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
-        name="Treatments & What to expect"
+        title="What to expect"
+        description="Osteopathy & massage across London"
+        name="What to expect"
         type="article"
       />
       <main>
         <section className="expect content skinny">
-          <h2 className="pageNameMobile">Treatments & What to Expect</h2>
+          <h2 className="pageNameMobile">What to Expect</h2>
           <div className="content-item">
             <p>
-              Massages will always be tailored to you and what you need, and
-              every appointment starts with a conversation to find out about
-              your needs, preferences, symptoms and medical history.
+            All appointments - whether osteopathy or massage - start with a consultation to find out a little more about you and your health, your needs and preferences. Massage sessions tend to have shorter consultations and assessment, depending on what is needed; for instance, if you are seeking a full body holistic or deep tissue massage then it may be very brief; whilst a sports massage to support recovery from a specific injury may involve a longer consultation. 
             </p>
-
-            <ul className="treatmentList">
-              <p className="intro">The kinds of treatment I offer include:</p>
-              <li>
-                <div className="massageType">
-                  <h3>Relaxing and holistic massage</h3>
-                </div>
-                which uses lighter strokes, aromatherapy essential oils and
-                tends to be a full body massage
-              </li>
-              <li>
-                <div className="massageType">
-                  <h3> Deep tissue massage</h3>
-                </div>
-                which tends to also be full body but using slightly stronger
-                pressure
-              </li>
-              <li>
-                <div className="massageType">
-                  <h3> Pregnancy and post natal massage</h3>
-                </div>
-                tailored towards the needs of pregnant people and new parents
-              </li>
-              <li>
-                <div className="massageType">
-                  <h3> Sports and remedial massage </h3>
-                </div>
-                which focuses on particular areas of concern / injuries and
-                often uses more active approaches, longer consultation at the
-                start and time for rehabilitation advice and exercises at the
-                end.
-              </li>
-              <li>
-                <div className="massageType">
-                  <h3>Facial Massage</h3>
-                </div>
-                A soothing and relaxing massage for your face, head and neck,
-                easing headaches and jaw pain, increasing blood and lymphatic
-                circulation, plumping the skin, smoothing fine lines and
-                wrinkles.
-              </li>
-            </ul>
-          </div>
-
-          <div className="content-item">
+  
+      
             <p>
-              During treatments I draw on a range of techniques and approaches
-              which may include combining relaxing and holistic massage strokes,
-              deeper tissue techniques, mobilisation, myofascial release,
-              stretching and take-home or exercise advice as needed; the
-              pressure I use will be guided by dialogue between us. My approach
-              draws on the understanding of anatomy and physiology, pathology,
-              biomechanics and rehabilitation that underpin my training in
-              osteopathy.
+            In your first osteopathic appointment, we will discuss in some detail any health concerns you have - including any pain, tension or discomfort that motivated booking an appointment, as well as your health history. I may then assess how you move, which may involve asking you to take off any bulky layers of clothing, to get an understanding of what has brought you here today. 
             </p>
 
             <p>
-              My practice aims to be actively consent led, body neutral /
-              positive, gender and sexuality affirmative and anti-racist; I try
-              to be aware of the influence of my own embodied experiences - as a
-              middle-class, queer, white woman - on my professional and personal
-              interactions. In practice this means I communicate what to expect,
-              ask questions where appropriate so that I don’t make assumptions.
-              If I think you may benefit from treatment from someone else
-              (another kind of practitioner, such as an acupuncturist, for
-              instance) I will always recommend them to you too.
+            Treatment then involves a mix of soft tissue work (similar to massage), mobilisations and manipulations of your joints, rhythmical movements, and exercise and rehabilitation - as required. I draw on a deep understanding of anatomy and physiology, pathology, pain science and biomechanics that underpins my training in osteopathy. The approaches we use will always differ person to person based on your presentation and preferences. 
+            </p>
+            <p>
+            My practice aims to be actively consent led, body neutral/ positive, gender and sexuality affirmative and anti-racist; I try to be aware of the influence of my own embodied experiences - as a middle-class, queer, white woman - on my professional and personal interactions. In practice this means I communicate what to expect, and ask questions where needed so that I don’t make assumptions. If I think you may benefit from treatment from someone else (another kind of practitioner, such as an acupuncturist, for instance) I will always recommend them to you too.
+
             </p>
           </div>
         </section>

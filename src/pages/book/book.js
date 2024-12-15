@@ -12,8 +12,7 @@ const Book = ({ setPageStatus }) => {
     <>
       <SEO
         title="Book me"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
+        description="Osteopathy & massage across London"
         name="Book me"
         type="article"
       />
@@ -21,33 +20,9 @@ const Book = ({ setPageStatus }) => {
         <section className="book content">
           <h2 className="pageNameMobile">Book me</h2>
           <p className="content-item">
-            I see clients at the beautiful{" "}
-            <a
-              href="https://www.instagram.com/studio.pinacle/"
-              target="_blank"
-              rel="noreferrer"
-              className="highlighted"
-            >
-              studio.pinacle
-            </a>{" "}
-            in Peckham, and also do home visits across most parts of London;
-            these appointments can be booked directly using my booking system
-            below.{" "}
+          I work at a number of clinics across London, and you can find details and how to book below.
           </p>
-          <p className="content-item">
-            {" "}
-            I also have appointments at Butterfield Osteopathy in Stoke
-            Newington twice a week, which you have to book directly through
-            their website:{" "}
-            <a
-              href="https://www.butterfieldosteopathy.co.uk"
-              target="_blank"
-              rel="noreferrer"
-              className="highlighted"
-            >
-              www.butterfieldosteopathy.co.uk
-            </a>
-          </p>
+         
           <div className="bookingWidget content-item">
             <iframe
               src="https://app.squarespacescheduling.com/schedule.php?owner=27159191"

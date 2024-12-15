@@ -47,8 +47,7 @@ const Pricing = ({ setPageStatus }) => {
     <>
       <SEO
         title="Pricing"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
+        description="Osteopathy & massage across London"
         name="Pricing"
         type="article"
       />
@@ -57,24 +56,27 @@ const Pricing = ({ setPageStatus }) => {
           <h2 className="pageNameMobile">Pricing</h2>
           <div className="content-item">
             <p>
-              Whatever kind of massage you would like, treatments are priced by
-              length:
+            Whatever kind of massage you would like, treatments are priced by length. Initial Osteopathy appointments are slightly longer and more expensive than follow up osteopathy appointments. 
             </p>
+
+<p>I work at a number of different clinics which have differing fee structures which you can find on my booking page. </p>
+
+<p>At Studio Pinacle, in Peckham, my prices are: </p>
+
             <ul>
               <li className="massageType ">
-                <h3>60 minutes: £75 in studio / £85 home visit</h3>
+                <h3>Massage: 
+                 
+                £75 (60 minutes) £95 (90 minutes) </h3>
               </li>
               <li className="massageType ">
-                <h3>90 minutes: £95 in studio / £105 home visit</h3>
+                <h3>Osteopathy: 
+               
+              £90 (initial appt)
+              £70 (follow up)</h3>
               </li>
             </ul>
-
-            <p>
-              When you book, you will have the option to write a note if you’d
-              like to let me know what kind of massage you are looking for,
-              though there will always be time to discuss that on the day too.{" "}
-            </p>
-
+<br/>
             <h3 className="subtitle">Sliding scale payment options</h3>
             <p>
               I think bodywork is brilliant and want it to be available for
@@ -86,6 +88,7 @@ const Pricing = ({ setPageStatus }) => {
               the “Green Bottle Sliding Scale” model:
             </p>
           </div>
+         <br/>
           <div className="content-item bottle">
             <h3 className="subtitle">THE GREEN BOTTLE</h3>
 

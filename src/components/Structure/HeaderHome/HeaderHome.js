@@ -126,7 +126,6 @@ const HeaderHome = () => {
                   })}
                 >
                   <div className="treatments">
-                    <span>Treatments & </span>
                     <span>What to Expect</span>
                   </div>
                 </NavLink>
@@ -167,8 +166,7 @@ const HeaderHome = () => {
           </div>
           <div className="description">
             <p>
-              Sports, deep tissue, relaxing, pregnancy and remedial massage
-              across London.
+            Osteopathy & massage <br/>across London
             </p>
           </div>
         </header>
@@ -209,7 +207,7 @@ const HeaderHome = () => {
                       fontSize: isActive ? "3rem" : "inherit",
                     })}
                   >
-                    Treatments & What to Expect
+                   What to Expect
                   </NavLink>
                 </li>
                 <li>

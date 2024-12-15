@@ -60,8 +60,7 @@ const Contact = ({ setPageStatus }) => {
     <>
       <SEO
         title="Contact"
-        description="Sports, deep tissue, relaxing, pregnancy and remedial massage across
-          London"
+        description="Osteopathy & massage across London"
         name="Contact"
         type="article"
       />
